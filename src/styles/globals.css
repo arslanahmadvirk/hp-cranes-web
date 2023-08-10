@@ -8,4 +8,8 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-
+@layer components {
+  .footer-gradient {
+    @apply bg-gradient-to-b from-[#FFCB3C] to-[#E3A804];
+  }
+}

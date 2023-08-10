@@ -29,10 +29,10 @@ const nav_links = [
 ];
 export default function Navbar() {
   return (
-    <div className="md:h-40 h-36 bg-primary-yellow-dark shadow-md">
+    <div className="md:h-32 h-28 bg-primary-yellow-dark shadow-md">
       <div className="container 2xl:max-w-screen-2xl mx-auto">
-        <div className="flex justify-between items-center gap-6 py-4 border-b border-white/50">
-          <div className="inline-flex lg:gap-12 gap-6 justify-between lg:text-base text-sm font-medium">
+        <div className="flex justify-between items-center gap-6 py-2 border-b border-white/50">
+          <div className="inline-flex lg:gap-12 gap-6 justify-between text-sm font-medium">
             <span>{"TEL: (011) 740 9725/28"}</span>
             <span>{"FAX: (011) 740 8416"}</span>
           </div>
@@ -41,7 +41,7 @@ export default function Navbar() {
             <BreakdownBtn />
           </div>
         </div>
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           <Link href={"/"}>
             <Image
               src={"/images/company-logo.png"}
@@ -80,7 +80,7 @@ function SearchInput() {
         placeholder="Search"
         name="search-query"
         value={searchQuery}
-        className="py-1.5 px-4 pr-12 rounded-full drop-shadow-md shadow-black w-64 text-sm outline-primary-yellow-dark "
+        className="py-1.5 px-4 pr-12 rounded-full drop-shadow-md shadow-black w-64 text-sm outline-primary-yellow-dark"
         onChange={handleSearchQuery}
         onKeyDown={handleKeyPress}
       />
@@ -104,7 +104,7 @@ function BreakdownBtn() {
 
 function Navigation() {
   return (
-    <nav className="2xl:basis-2/5 lg:basis-6/12 basis-8/12 flex justify-between font-medium md:text-base text-sm">
+    <nav className="2xl:basis-2/5 lg:basis-6/12 basis-8/12 flex justify-between font-medium xl:text-base text-sm">
       {nav_links.map(({ path, link }) => (
         <Link
           key={path}
