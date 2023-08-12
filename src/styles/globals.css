@@ -9,6 +9,9 @@
 }
 
 @layer components {
+  body {
+    @apply overflow-x-hidden;
+  }
   .yellow-gradient {
     @apply bg-gradient-to-b from-[#FFCB3C] to-[#E3A804];
   }

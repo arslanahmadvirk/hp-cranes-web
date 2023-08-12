@@ -5,12 +5,12 @@ export default function ContactUs() {
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto">
       <SectionHeading heading={"Contact Us"} />
-      <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between py-20 mx-10">
-        <div className="lg:basis-1/2 basis-full">
+      <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between py-20 lg:mx-10 mx-auto">
+        <div className="lg:basis-1/2 basis-full lg:mx-0 mx-10">
           <h1 className="font-bold lg:text-4xl text-2xl mb-12">
             Get in touch with <br /> our team today
           </h1>
-          <div className="flex flex-wrap gap-12">
+          <div className="flex flex-wrap gap-12 ">
             <ContactItem
               icon={<FiPhone className="w-8 h-8" />}
               item={"Phone"}
