@@ -66,12 +66,12 @@ export default function MobileNavbar() {
 function SidePanel({ show }) {
   return (
     <div
-      className={`w-screen h-screen fixed top-0 left-0 bg-primary-yellow transition-transform duration-500 ${
+      className={`w-screen h-screen fixed top-0 left-0 yellow-gradient  transition-transform duration-500 ${
         !show && "translate-x-full"
       }`}
     >
       <nav className="p-4 relative top-12">
-        <ul className="list-none divide-y divide-primary-yellow-dark overflow-hidden">
+        <ul className="list-none divide-y divide-yellow-600 overflow-hidden">
           {nav_links.map(({ path, link }, index) => {
             return (
               <li

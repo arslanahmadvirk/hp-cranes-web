@@ -19,6 +19,14 @@ module.exports = {
       fontFamily: {
         montserrat: ["var(--font-montserrat)"],
       },
+      boxShadow: {
+        "yellow-down": "-20px 20px 0 0 #FFD600",
+        double:
+          "-2px 2px 5px 0px rgb(209, 213, 219), 30px -30px 0px 0px rgb(255, 214, 0)",
+      },
+      borderWidth: {
+        3: "3px",
+      },
     },
   },
   plugins: [],

@@ -9,7 +9,13 @@
 }
 
 @layer components {
-  .footer-gradient {
+  .yellow-gradient {
     @apply bg-gradient-to-b from-[#FFCB3C] to-[#E3A804];
   }
+  .input-field {
+    @apply py-2 px-4 rounded-full placeholder:text-gray-500 placeholder:italic border border-gray-700;
+  }
+  /* .shadow-double {
+    box-shadow: -2px 2px 5px #d1d5db, 30px -30px 0 #ffd600;
+  } */
 }
