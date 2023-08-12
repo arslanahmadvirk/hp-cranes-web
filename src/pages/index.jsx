@@ -36,10 +36,10 @@ function AboutUs() {
   ];
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto">
-      <div className="py-20 flex lg:flex-row flex-col justify-between gap-20 lg:mx-10">
+      <div className="flex lg:flex-row flex-col justify-between py-20 gap-20 lg:mx-10">
         <div className="basis-8/12 mx-6 lg:mx-0">
           <SectionHeading heading={"About Us"} />
-          <div className="my-8 text-justify">
+          <div className="mt-10 text-justify">
             <Image
               src={"/images/about-us-main.png"}
               width={976}
@@ -61,9 +61,9 @@ function AboutUs() {
               qualified as SABS ISO 9001:2008.
             </p>
             <br />
-            <h5 className="text-xl font-semibold">Quality Policy</h5>
+            <h5 className="text-lg font-semibold">Quality Policy</h5>
             <br />
-            <ul className="list-disc mx-4 space-y-2">
+            <ul className="list-disc ml-4 space-y-2 text-justify">
               <li>
                 To a service that meets the requirements of our clients, first
                 time, every time
@@ -78,8 +78,8 @@ function AboutUs() {
           </div>
         </div>
         <div className="basis-4/12 mx-12 lg:mx-0">
-          <div className="mt-16">
-            <h1 className="text-center underline text-lg font-semibold mb-8">
+          <div className="lg:mt-16">
+            <h1 className="text-center underline underline-offset-2 text-lg font-semibold mb-8">
               Recent Posts
             </h1>
             <ul className=" list-disc space-y-2 mb-8">
@@ -94,7 +94,7 @@ function AboutUs() {
                 </li>
               ))}
             </ul>
-            <h1 className="text-center underline text-lg font-semibold mb-8">
+            <h1 className="text-center underline underline-offset-2 text-lg font-semibold mb-8">
               Videos
             </h1>
 
@@ -131,32 +131,29 @@ function AboutUs() {
 
 function WhyChooseUs() {
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto">
+    <div className="container 2xl:max-w-screen-2xl mx-auto ">
       <SectionHeading heading={"Why Choose HP Cranes ?"} />
-      <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between items-center py-20 mx-5">
+      <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between items-center lg:py-20 pt-10 pb-20 mx-5">
         <div className="lg:basis-1/2 basis-full ">
-          <h2 className="font-semibold text-xl mb-4">We Commit Ourselves:</h2>
-          <ul className="list-disc mx-4 space-y-1">
+          <h2 className="font-semibold text-lg mb-4">We Commit Ourselves:</h2>
+          <ul className="list-disc mx-5 space-y-1 text-justify">
             <li>
               To A Service That Meets The Requirements Of Our Clients, First
-              Time, Every Time
+              Time, Every Time.
             </li>
-            <li>To Provide Well Managed, Trained And Motivated Personnel</li>
+            <li>To Provide Well Managed, Trained And Motivated Personnel.</li>
             <li>
               To Meeting Any Regulatory And Statutory Requirements Applicable To
-              Our Business
-            </li>
-            <li>
-              To Meeting Any Regulatory And Statutory Requirements Applicable To
-              Our Business
+              Our Business.
             </li>
             <li>
               To The Development And Maintenance Of A QUALITY SYSTEM Designed
               To:
+              <ul>
+                <li>– Ensure Continuous Improvement.</li>
+                <li>– Meet The Requirements Of SABS ISO 9001 : 2015.</li>
+              </ul>
             </li>
-            <li>– Ensure Continuous Improvement.</li>
-            <li>– Meet The Requirements Of SABS ISO 9001 : 2015.</li>
-            <br />
             <li>
               To Rendering Above Average Services To The Satisfaction Of Our
               Clients In The Field O Materials Handling Equipment And Service
@@ -190,7 +187,7 @@ function Statistics() {
     { item_name: "Awards Won", value: 96 },
   ];
   return (
-    <div className="py-20">
+    <div className="lg:py-20 pt-10 pb-20">
       <div className="bg-statistics bg-cover bg-center">
         <div className="relative top-0 py-16 bg-black/80">
           <div className="container 2xl:max-w-screen-2xl mx-auto">

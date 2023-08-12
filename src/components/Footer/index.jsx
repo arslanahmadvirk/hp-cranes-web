@@ -22,8 +22,7 @@ export default function Footer() {
             className="lg:w-72 w-48 mb-4"
           />
           <p className="font-medium text-sm">
-            {`Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text.`}
+            Committed to excellence in crane products, services and inspections.
           </p>
         </div>
         <div className="basis-4/12">
