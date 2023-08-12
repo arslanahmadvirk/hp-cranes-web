@@ -8,6 +8,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import SlickSlider from "@/components/SlickSlider";
 
 export default function Home() {
   const isMobileScreen = useMediaQuery("(max-width: 768px)");
@@ -18,6 +19,9 @@ export default function Home() {
       </Head>
       {isMobileScreen ? <MobileNavbar /> : <Navbar />}
       <AboutUs />
+      <div className="container 2xl:max-w-screen-2xl mx-auto py-20">
+        <SlickSlider />
+      </div>
       <Statistics />
       <WhyChooseUs />
       <ContactUs />
@@ -195,7 +199,7 @@ function Statistics() {
               {statistics.map(({ item_name, value }, index) => (
                 <div key={index} className="text-white text-center">
                   <h1 className="text-4xl font-bold mb-4">
-                    <CountUp end={value} duration={2} />
+                    <CountUp end={value} duration={3} />
                   </h1>
                   <h4 className="text-sm md:text-lg">{item_name}</h4>
                 </div>
