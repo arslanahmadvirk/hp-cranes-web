@@ -10,6 +10,10 @@ import Image from "next/image";
 import Link from "next/link";
 import SlickSlider from "@/components/SlickSlider";
 import { HiArrowRight } from "react-icons/hi";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaStar } from "react-icons/fa";
 
 export default function Home() {
   const isMobileScreen = useMediaQuery("(max-width: 768px)");
@@ -25,6 +29,7 @@ export default function Home() {
       <Gallery />
       <WhyChooseUs />
       <Projects />
+      <Testimonials />
       <ContactUs />
       <Footer />
     </>
@@ -260,6 +265,7 @@ function ProductsAndServices() {
     </div>
   );
 }
+
 function Gallery() {
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto">
@@ -307,6 +313,7 @@ function Gallery() {
     </div>
   );
 }
+
 function Projects() {
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto">
@@ -363,13 +370,79 @@ function ProjectCard({ image, title, desc }) {
       />
 
       <div className="my-2 px-4">
-        <h1 className="text-lg font-bold uppercase h-12">{title}</h1>
+        <h1 className="text-lg font-bold uppercase h-12 mb-2">{title}</h1>
         <p className="mb-4 h-16">{desc}</p>
       </div>
-      <button className="relative bottom-3 left-4 text-left underline">
+      <Link href={"#"} className="relative bottom-3 left-4 text-left underline">
         <span className="font-medium">Read More</span>
         <HiArrowRight className="inline ml-2" />
-      </button>
+      </Link>
+    </div>
+  );
+}
+
+function Testimonials() {
+  return (
+    <div className="bg-primary-yellow py-10 overflow-hidden">
+      <div className="mb-8">
+        <h1 className="text-center px-8 mb-2 font-bold text-xl lg:text-2xl tracking-wider">
+          Testimonials
+        </h1>
+        <hr className="w-24 mx-auto border-t-3 border-white" />
+      </div>
+      <Slider
+        centerMode={true}
+        accessibility={true}
+        autoplay={true}
+        autoplaySpeed={5000}
+        infinite={true}
+        dots={true}
+        adaptiveHeight={true}
+        centerPadding="0"
+        arrows={true}
+        customPaging={(i) => {
+          return (
+            <span className="white-dot w-3 h-3 inline-block rounded-full border border-gray-300"></span>
+          );
+        }}
+        dotsClass="slick-dots slick-thumbs"
+      >
+        <Testimonial />
+        <Testimonial />
+        <Testimonial />
+      </Slider>
+    </div>
+  );
+}
+
+function Testimonial() {
+  return (
+    <div className="px-4">
+      <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+        <Image
+          src={"/images/testimonial-user.png"}
+          height={120}
+          width={120}
+          className="w-24 mx-auto rounded-full object-cover mb-8"
+          alt="Testimonial Image"
+        />
+        <p className="italic mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+          possimus tempore eius temporibus consectetur sed. Nesciunt vel alias
+          fugiat laborum? Obcaecati quidem fugit dolor, libero quisquam dolorem
+          consectetur dolorum nesciunt ipsa quam voluptate, molestias quas
+          expedita amet similique alias repellendus magnam inventore nemo
+          aspernatur, sint blanditiis enim?
+        </p>
+        <div className="flex justify-center gap-2 mb-8">
+          <FaStar className="fill-white" />
+          <FaStar className="fill-white" />
+          <FaStar className="fill-white" />
+          <FaStar className="fill-white" />
+          <FaStar className="fill-white" />
+        </div>
+        <h1 className="font-bold md:text-lg lg:text-xl mb-8">John Smith</h1>
+      </div>
     </div>
   );
 }

@@ -18,7 +18,10 @@
   .input-field {
     @apply py-2 px-4 rounded-full placeholder:text-gray-500 placeholder:italic border border-gray-700;
   }
-  ul.slick-dots li.slick-active span {
-    @apply !bg-primary-yellow border-transparent;
+  ul.slick-dots li.slick-active span.yellow-dot {
+    @apply bg-primary-yellow border-transparent;
+  }
+  ul.slick-dots li.slick-active span.white-dot {
+    @apply bg-white border-transparent;
   }
 }

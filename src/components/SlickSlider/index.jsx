@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,10 +19,9 @@ export default function SlickSlider({ children }) {
         { breakpoint: 1024, settings: { slidesToShow: 2 } },
         { breakpoint: 640, settings: { slidesToShow: 1 } },
       ]}
-      // className="overflow-hidden"
       customPaging={(i) => {
         return (
-          <span className="w-3 h-3 inline-block rounded-full border border-gray-300"></span>
+          <span className="yellow-dot w-3 h-3 inline-block rounded-full border border-gray-300"></span>
         );
       }}
       dotsClass="slick-dots slick-thumbs"
