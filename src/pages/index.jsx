@@ -9,6 +9,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import SlickSlider from "@/components/SlickSlider";
+import { HiArrowRight } from "react-icons/hi";
 
 export default function Home() {
   const isMobileScreen = useMediaQuery("(max-width: 768px)");
@@ -19,11 +20,11 @@ export default function Home() {
       </Head>
       {isMobileScreen ? <MobileNavbar /> : <Navbar />}
       <AboutUs />
-      <div className="container 2xl:max-w-screen-2xl mx-auto py-20">
-        <SlickSlider />
-      </div>
+      <ProductsAndServices />
       <Statistics />
+      <Gallery />
       <WhyChooseUs />
+      <Projects />
       <ContactUs />
       <Footer />
     </>
@@ -48,7 +49,7 @@ function AboutUs() {
               src={"/images/about-us-main.png"}
               width={976}
               height={500}
-              className="w-auto rounded-tl-3xl rounded-bl-lg rounded-tr-lg rounded-br-3xl mb-8"
+              className="w-full rounded-tl-3xl rounded-bl-lg rounded-tr-lg rounded-br-3xl mb-8"
               alt="Family Image"
             />
             <p>
@@ -191,7 +192,7 @@ function Statistics() {
     { item_name: "Awards Won", value: 96 },
   ];
   return (
-    <div className="lg:py-20 pt-10 pb-20">
+    <div className="py-20">
       <div className="bg-statistics bg-cover bg-center">
         <div className="relative top-0 py-16 bg-black/80">
           <div className="container 2xl:max-w-screen-2xl mx-auto">
@@ -208,6 +209,167 @@ function Statistics() {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function ProductsAndServices() {
+  return (
+    <div className="container 2xl:max-w-screen-2xl mx-auto">
+      <SectionHeading heading={"Products & Services"} />
+      <div className="lg:py-20 pt-10 pb-20 overflow-hidden">
+        <SlickSlider>
+          <div className="px-2">
+            <Image
+              src={"/images/product-1.png"}
+              width={578}
+              height={350}
+              alt="Product Image"
+              className="rounded-xl mx-auto"
+            />
+          </div>
+          <div className="px-2">
+            <Image
+              src={"/images/product-2.png"}
+              width={578}
+              height={350}
+              alt="Product Image"
+              className="rounded-xl mx-auto"
+            />
+          </div>
+          <div className="px-2">
+            <Image
+              src={"/images/product-3.png"}
+              width={578}
+              height={350}
+              alt="Product Image"
+              className="rounded-xl mx-auto"
+            />
+          </div>
+          <div className="px-2">
+            <Image
+              src={"/images/product-2.png"}
+              width={578}
+              height={350}
+              alt="Product Image"
+              className="rounded-xl mx-auto"
+            />
+          </div>{" "}
+        </SlickSlider>
+      </div>
+    </div>
+  );
+}
+function Gallery() {
+  return (
+    <div className="container 2xl:max-w-screen-2xl mx-auto">
+      <SectionHeading heading={"Gallery"} />
+      <div className="lg:py-20 pt-10 pb-20 overflow-hidden">
+        <SlickSlider>
+          <div className="px-2">
+            <Image
+              src={"/images/gallery-1.png"}
+              width={579}
+              height={579}
+              alt="Product Image"
+              className="rounded-xl mx-auto"
+            />
+          </div>
+          <div className="px-2">
+            <Image
+              src={"/images/gallery-2.png"}
+              width={579}
+              height={579}
+              alt="Product Image"
+              className="rounded-xl mx-auto"
+            />
+          </div>
+          <div className="px-2">
+            <Image
+              src={"/images/gallery-3.png"}
+              width={579}
+              height={570}
+              alt="Product Image"
+              className="rounded-xl mx-auto"
+            />
+          </div>
+          <div className="px-2">
+            <Image
+              src={"/images/gallery-2.png"}
+              width={579}
+              height={579}
+              alt="Product Image"
+              className="rounded-xl mx-auto"
+            />
+          </div>{" "}
+        </SlickSlider>
+      </div>
+    </div>
+  );
+}
+function Projects() {
+  return (
+    <div className="container 2xl:max-w-screen-2xl mx-auto">
+      <SectionHeading heading={"Projects"} />
+      <div className="lg:py-20 pt-10 pb-20 overflow-hidden ">
+        <SlickSlider>
+          <div className="p-2">
+            <ProjectCard
+              image={"/images/project-1.png"}
+              title={"INSTALLATION COMPLETE IN ZAMBIA"}
+              desc={"Installation Of ; 70 Stroke, 10 Ton Overhead Crane..."}
+            />
+          </div>
+          <div className="p-2">
+            <ProjectCard
+              image={"/images/project-2.png"}
+              title={"Elandsfontein"}
+              desc={
+                "Give Credit where Credit is due. When life seems to run by us, and we sometimes forget to thank the..."
+              }
+            />
+          </div>
+          <div className="p-2">
+            <ProjectCard
+              image={"/images/project-3.png"}
+              title={"MANUFACTURING OF LEG PROTECTERS"}
+              desc={"Manufacturing Of Special Racking LEG Protectors..."}
+            />
+          </div>
+          <div className="p-2">
+            <ProjectCard
+              image={"/images/project-2.png"}
+              title={"Elandsfontein"}
+              desc={
+                "Give Credit where Credit is due. When life seems to run by us, and we sometimes forget to thank the..."
+              }
+            />
+          </div>
+        </SlickSlider>
+      </div>
+    </div>
+  );
+}
+
+function ProjectCard({ image, title, desc }) {
+  return (
+    <div className="flex flex-col rounded-xl shadow-md h-[450px]">
+      <Image
+        src={image}
+        height={380}
+        width={585}
+        alt={title + ` Image`}
+        className="rounded-t-xl"
+      />
+
+      <div className="my-2 px-4">
+        <h1 className="text-lg font-bold uppercase h-12">{title}</h1>
+        <p className="mb-4 h-16">{desc}</p>
+      </div>
+      <button className="relative bottom-3 left-4 text-left underline">
+        <span className="font-medium">Read More</span>
+        <HiArrowRight className="inline ml-2" />
+      </button>
     </div>
   );
 }
