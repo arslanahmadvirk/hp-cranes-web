@@ -10,6 +10,7 @@ export default function SlickSlider({ children }) {
       slidesToShow={3}
       slidesToScroll={1}
       autoplay={true}
+      
       autoplaySpeed={5000}
       infinite={true}
       dots={true}

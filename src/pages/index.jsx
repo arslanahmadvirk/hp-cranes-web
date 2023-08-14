@@ -9,7 +9,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import SlickSlider from "@/components/SlickSlider";
-import { HiArrowRight } from "react-icons/hi";
+import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -23,6 +23,7 @@ export default function Home() {
         <title>Home | HP Cranes</title>
       </Head>
       {isMobileScreen ? <MobileNavbar /> : <Navbar />}
+      <Hero />
       <AboutUs />
       <ProductsAndServices />
       <Statistics />
@@ -36,6 +37,38 @@ export default function Home() {
   );
 }
 
+function Hero() {
+  const heroSlides = [
+    {
+      image: "/images/hero-1.png",
+    },
+    {
+      image: "/images/hero-2.png",
+    },
+    {
+      image: "/images/hero-3.png",
+    },
+    {
+      image: "/images/hero-4.png",
+    },
+  ];
+  return (
+    <div>
+      <Slider fade={true} autoplay={true} autoplaySpeed={2000}>
+        {heroSlides.map(({ image }) => (
+          <Image
+            key={image}
+            src={image}
+            width={1024}
+            height={720}
+            alt="Hero Image"
+            className="w-full h-[500px] object-cover"
+          />
+        ))}
+      </Slider>
+    </div>
+  );
+}
 function AboutUs() {
   const recent_posts = [
     "WORK DIRECTOR ACHIEVES ELECTRICAL RED SEAL DIPLOMA",
@@ -233,7 +266,7 @@ function ProductsAndServices() {
               className="rounded-xl mx-auto"
             />
           </div>
-          <div className="px-2">
+          <div className=" px-2">
             <Image
               src={"/images/product-2.png"}
               width={578}
@@ -242,7 +275,7 @@ function ProductsAndServices() {
               className="rounded-xl mx-auto"
             />
           </div>
-          <div className="px-2">
+          <div className=" px-2">
             <Image
               src={"/images/product-3.png"}
               width={578}
@@ -251,7 +284,7 @@ function ProductsAndServices() {
               className="rounded-xl mx-auto"
             />
           </div>
-          <div className="px-2">
+          <div className=" px-2">
             <Image
               src={"/images/product-2.png"}
               width={578}
@@ -383,34 +416,47 @@ function ProjectCard({ image, title, desc }) {
 
 function Testimonials() {
   return (
-    <div className="bg-primary-yellow py-10 overflow-hidden">
+    <div className="bg-primary-yellow-dark py-10 lg:my-20 my-10 overflow-hidden">
       <div className="mb-8">
         <h1 className="text-center px-8 mb-2 font-bold text-xl lg:text-2xl tracking-wider">
           Testimonials
         </h1>
         <hr className="w-24 mx-auto border-t-3 border-white" />
       </div>
-      <Slider
-        centerMode={true}
-        accessibility={true}
-        autoplay={true}
-        autoplaySpeed={5000}
-        infinite={true}
-        dots={true}
-        adaptiveHeight={true}
-        centerPadding="0"
-        arrows={true}
-        customPaging={(i) => {
-          return (
-            <span className="white-dot w-3 h-3 inline-block rounded-full border border-gray-300"></span>
-          );
-        }}
-        dotsClass="slick-dots slick-thumbs"
-      >
-        <Testimonial />
-        <Testimonial />
-        <Testimonial />
-      </Slider>
+      <div className="mx-14">
+        <Slider
+          centerMode={true}
+          accessibility={true}
+          autoplay={true}
+          autoplaySpeed={5000}
+          infinite={true}
+          dots={true}
+          adaptiveHeight={true}
+          centerPadding="0"
+          nextArrow={
+            <HiArrowRight
+              fill="white"
+              style={{ height: "40px", width: "40px" }}
+            />
+          }
+          prevArrow={
+            <HiArrowLeft
+              fill="white"
+              style={{ height: "40px", width: "40px" }}
+            />
+          }
+          customPaging={(i) => {
+            return (
+              <span className="white-dot w-3 h-3 inline-block rounded-full border border-gray-300"></span>
+            );
+          }}
+          dotsClass="slick-dots slick-thumbs"
+        >
+          <Testimonial />
+          <Testimonial />
+          <Testimonial />
+        </Slider>
+      </div>
     </div>
   );
 }
@@ -426,7 +472,7 @@ function Testimonial() {
           className="w-24 mx-auto rounded-full object-cover mb-8"
           alt="Testimonial Image"
         />
-        <p className="italic mb-8">
+        <p className="italic mb-8 max-w-2xl mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
           possimus tempore eius temporibus consectetur sed. Nesciunt vel alias
           fugiat laborum? Obcaecati quidem fugit dolor, libero quisquam dolorem
