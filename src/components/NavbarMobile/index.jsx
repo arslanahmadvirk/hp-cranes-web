@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BiMenuAltRight, BiX } from "react-icons/bi";
+import { BiMenuAltRight, BiSearch, BiX } from "react-icons/bi";
+import { BreakdownBtn } from "../Navbar";
+import { FaSearch } from "react-icons/fa";
 
 const nav_links = [
   {
@@ -23,7 +25,7 @@ const nav_links = [
     link: "Gallery",
   },
   {
-    path: "/contact_us",
+    path: "/contact",
     link: "Contact Us",
   },
 ];
@@ -58,16 +60,21 @@ export default function MobileNavbar() {
             className="sm:w-48 w-40"
           />
 
-          <button
-            onClick={togglePanel}
-            className="focus:outline-none active:outline-none z-[9999]"
-          >
-            {isOpen ? (
-              <BiX className="w-10 h-10" />
-            ) : (
-              <BiMenuAltRight className="w-10 h-10" />
-            )}
-          </button>
+          <div className="flex items-center gap-4">
+            <button>
+              <BiSearch className="w-8 h-8" />
+            </button>
+            <button
+              onClick={togglePanel}
+              className="focus:outline-none active:outline-none z-[9999]"
+            >
+              {isOpen ? (
+                <BiX className="w-10 h-10" />
+              ) : (
+                <BiMenuAltRight className="w-10 h-10" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </>
@@ -99,6 +106,10 @@ function SidePanel({ show }) {
             );
           })}
         </ul>
+
+        <div className="mt-4 text-center">
+          <BreakdownBtn />
+        </div>
       </nav>
     </div>
   );

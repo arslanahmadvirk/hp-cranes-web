@@ -92,8 +92,8 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <h5 className="font-medium text-center px-8">
-        Copyright © 2023{" "}
+      <h5 className="font-medium text-center text-xs lg:text-sm px-8">
+        Copyright © 2023
         <span className="underline underline-offset-2">
           HP CRANES CONSULTING CC
         </span>{" "}

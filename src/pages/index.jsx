@@ -1,7 +1,6 @@
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import MobileNavbar from "@/components/NavbarMobile";
+
 import CountUp from "react-countup";
 import SectionHeading from "@/components/SectionHeading";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -9,11 +8,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import SlickSlider from "@/components/SlickSlider";
+import { FaStar } from "react-icons/fa";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaStar } from "react-icons/fa";
 
 export default function Home() {
   const isMobileScreen = useMediaQuery("(max-width: 768px)");
@@ -22,7 +21,6 @@ export default function Home() {
       <Head>
         <title>Home | HP Cranes</title>
       </Head>
-      {isMobileScreen ? <MobileNavbar /> : <Navbar />}
       <Hero />
       <AboutUs />
       <ProductsAndServices />
@@ -32,7 +30,6 @@ export default function Home() {
       <Projects />
       <Testimonials />
       <ContactUs />
-      <Footer />
     </>
   );
 }
@@ -76,6 +73,11 @@ function Hero() {
             style={{ position: "absolute !important" }}
           />
         }
+        customPaging={(i) => {
+          return (
+            <span className="yellow-dot w-3 h-3 inline-block rounded-full border border-gray-300"></span>
+          );
+        }}
       >
         {heroSlides.map(({ image }) => (
           <div key={image} className="relative">
@@ -103,7 +105,10 @@ function AboutUs() {
     " DISTRIBUTORS OF HETRONIC",
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:my-24 my-14">
+    <div
+      id="aboutUs"
+      className="container 2xl:max-w-screen-2xl mx-auto lg:my-24 my-14"
+    >
       <div className="flex lg:flex-row flex-col justify-between gap-20 lg:mx-10">
         <div className="basis-8/12 mx-6 lg:mx-0">
           <SectionHeading heading={"About Us"} />

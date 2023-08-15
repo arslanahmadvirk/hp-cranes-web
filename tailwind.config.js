@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        statistics: "url('/images/statistics-background.png')",
+        statistics: "url('/images/statistics-bg.png')",
+        "hero-1": "url('/images/hero-bg-1.png')",
+        "hero-2": "url('/images/hero-bg-2.png')",
       },
       colors: {
         "primary-yellow": "#FFD600",
