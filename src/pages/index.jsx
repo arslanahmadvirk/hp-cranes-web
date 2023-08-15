@@ -103,7 +103,7 @@ function AboutUs() {
     " DISTRIBUTORS OF HETRONIC",
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:my-24 my-10">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:my-24 my-14">
       <div className="flex lg:flex-row flex-col justify-between gap-20 lg:mx-10">
         <div className="basis-8/12 mx-6 lg:mx-0">
           <SectionHeading heading={"About Us"} />
@@ -198,7 +198,7 @@ function AboutUs() {
 
 function WhyChooseUs() {
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14">
       <SectionHeading heading={"Why Choose HP Cranes ?"} />
       <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between items-center mx-5 mt-14">
         <div className="lg:basis-1/2 basis-full ">
@@ -254,7 +254,7 @@ function Statistics() {
     { item_name: "Awards Won", value: 96 },
   ];
   return (
-    <div className="lg:mb-24 mb-10">
+    <div className="lg:mb-24 mb-14">
       <div className="bg-statistics bg-cover bg-center">
         <div className="relative top-0 py-16 bg-black/80">
           <div className="container 2xl:max-w-screen-2xl mx-auto">
@@ -288,7 +288,7 @@ function ProductsAndServices() {
     },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14">
       <SectionHeading heading={"Products & Services"} />
       <div className="mt-14 overflow-hidden">
         <SlickSlider>
@@ -322,7 +322,7 @@ function Gallery() {
     },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14">
       <SectionHeading heading={"Gallery"} />
       <div className="mt-14 overflow-hidden">
         <SlickSlider>
@@ -362,7 +362,7 @@ function Projects() {
     },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14">
       <SectionHeading heading={"Projects"} />
       <div className=" overflow-hidden mt-14 ">
         <SlickSlider>
@@ -402,7 +402,7 @@ function ProjectCard({ image, title, desc }) {
 
 function Testimonials() {
   return (
-    <div className="bg-primary-yellow-dark py-10 overflow-hidden lg:mb-24 mb-10">
+    <div className="bg-primary-yellow-dark py-10 overflow-hidden lg:mb-24 mb-14">
       <div className="mb-10">
         <h1 className="text-center px-8 mb-2 font-bold text-xl lg:text-2xl tracking-wider">
           Testimonials
