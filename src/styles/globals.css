@@ -24,7 +24,7 @@
   ul.slick-dots li.slick-active span.white-dot {
     @apply bg-white border-transparent;
   }
-  .slick-track .slick-current .slick-target {
-    @apply bg-purple-700;
+  .hero-slider .slick-slider > img.slick-prev {
+    @apply !absolute;
   }
 }

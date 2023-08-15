@@ -3,9 +3,9 @@ import { FiPhone } from "react-icons/fi";
 import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
 export default function ContactUs() {
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
       <SectionHeading heading={"Contact Us"} />
-      <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between lg:py-20 pt-10 pb-20 lg:mx-10 mx-auto">
+      <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between mt-14 lg:mx-10 mx-auto">
         <div className="lg:basis-1/2 basis-full lg:mx-0 mx-10">
           <h1 className="font-bold lg:text-4xl text-2xl mb-12">
             Get in touch with <br /> our team today

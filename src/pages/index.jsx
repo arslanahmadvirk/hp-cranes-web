@@ -53,22 +53,47 @@ function Hero() {
     },
   ];
   return (
-    <div>
-      <Slider fade={true} autoplay={true} autoplaySpeed={2000}>
-        {heroSlides.map(({ image }) => (
+    <div className="hero-slider relative 2xl:max-w-screen-2xl mx-auto overflow-hidden">
+      <Slider
+        fade={true}
+        autoplay={true}
+        autoplaySpeed={2000}
+        className="relative"
+        nextArrow={
           <Image
-            key={image}
-            src={image}
-            width={1024}
-            height={720}
-            alt="Hero Image"
-            className="w-full h-[500px] object-cover"
+            src={"/images/arrow-right.png"}
+            height={50}
+            width={50}
+            alt="Next"
           />
+        }
+        prevArrow={
+          <Image
+            src={"/images/arrow-left.png"}
+            height={50}
+            width={50}
+            alt="Prev"
+            style={{ position: "absolute !important" }}
+          />
+        }
+      >
+        {heroSlides.map(({ image }) => (
+          <div key={image} className="relative">
+            <Image
+              src={image}
+              width={1024}
+              height={720}
+              alt="Hero Image"
+              className="xl:w-full xl:h-[500px] object-cover"
+            />
+            <div className="carousel-overlay absolute h-full top-0 left-0 bg-black/50"></div>
+          </div>
         ))}
       </Slider>
     </div>
   );
 }
+
 function AboutUs() {
   const recent_posts = [
     "WORK DIRECTOR ACHIEVES ELECTRICAL RED SEAL DIPLOMA",
@@ -78,11 +103,11 @@ function AboutUs() {
     " DISTRIBUTORS OF HETRONIC",
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto">
-      <div className="flex lg:flex-row flex-col justify-between py-20 gap-20 lg:mx-10">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:my-24 my-10">
+      <div className="flex lg:flex-row flex-col justify-between gap-20 lg:mx-10">
         <div className="basis-8/12 mx-6 lg:mx-0">
           <SectionHeading heading={"About Us"} />
-          <div className="mt-10 text-justify">
+          <div className="mt-14 text-justify">
             <Image
               src={"/images/about-us-main.png"}
               width={976}
@@ -140,7 +165,6 @@ function AboutUs() {
             <h1 className="text-center underline underline-offset-2 text-lg font-semibold mb-8">
               Videos
             </h1>
-
             <div className="flex flex-col gap-8 text-center">
               <Link href={"#"} target="_blank">
                 <Image
@@ -174,9 +198,9 @@ function AboutUs() {
 
 function WhyChooseUs() {
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto ">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
       <SectionHeading heading={"Why Choose HP Cranes ?"} />
-      <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between items-center lg:py-20 pt-10 pb-20 mx-5">
+      <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between items-center mx-5 mt-14">
         <div className="lg:basis-1/2 basis-full ">
           <h2 className="font-semibold text-lg mb-4">We Commit Ourselves:</h2>
           <ul className="list-disc mx-5 space-y-1 text-justify">
@@ -230,7 +254,7 @@ function Statistics() {
     { item_name: "Awards Won", value: 96 },
   ];
   return (
-    <div className="py-20">
+    <div className="lg:mb-24 mb-10">
       <div className="bg-statistics bg-cover bg-center">
         <div className="relative top-0 py-16 bg-black/80">
           <div className="container 2xl:max-w-screen-2xl mx-auto">
@@ -252,47 +276,33 @@ function Statistics() {
 }
 
 function ProductsAndServices() {
+  const productSlides = [
+    {
+      image: "/images/product-1.png",
+    },
+    {
+      image: "/images/product-2.png",
+    },
+    {
+      image: "/images/product-3.png",
+    },
+  ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
       <SectionHeading heading={"Products & Services"} />
-      <div className="lg:py-20 pt-10 pb-20 overflow-hidden">
+      <div className="mt-14 overflow-hidden">
         <SlickSlider>
-          <div className="px-2">
-            <Image
-              src={"/images/product-1.png"}
-              width={578}
-              height={350}
-              alt="Product Image"
-              className="rounded-xl mx-auto"
-            />
-          </div>
-          <div className=" px-2">
-            <Image
-              src={"/images/product-2.png"}
-              width={578}
-              height={350}
-              alt="Product Image"
-              className="rounded-xl mx-auto"
-            />
-          </div>
-          <div className=" px-2">
-            <Image
-              src={"/images/product-3.png"}
-              width={578}
-              height={350}
-              alt="Product Image"
-              className="rounded-xl mx-auto"
-            />
-          </div>
-          <div className=" px-2">
-            <Image
-              src={"/images/product-2.png"}
-              width={578}
-              height={350}
-              alt="Product Image"
-              className="rounded-xl mx-auto"
-            />
-          </div>{" "}
+          {productSlides.map(({ image }) => (
+            <div key={image} className="px-2">
+              <Image
+                src={image}
+                width={578}
+                height={350}
+                alt="Product Image"
+                className="rounded-xl mx-auto"
+              />
+            </div>
+          ))}
         </SlickSlider>
       </div>
     </div>
@@ -300,47 +310,33 @@ function ProductsAndServices() {
 }
 
 function Gallery() {
+  const gallerySlides = [
+    {
+      image: "/images/gallery-1.png",
+    },
+    {
+      image: "/images/gallery-2.png",
+    },
+    {
+      image: "/images/gallery-3.png",
+    },
+  ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
       <SectionHeading heading={"Gallery"} />
-      <div className="lg:py-20 pt-10 pb-20 overflow-hidden">
+      <div className="mt-14 overflow-hidden">
         <SlickSlider>
-          <div className="px-2">
-            <Image
-              src={"/images/gallery-1.png"}
-              width={579}
-              height={579}
-              alt="Product Image"
-              className="rounded-xl mx-auto"
-            />
-          </div>
-          <div className="px-2">
-            <Image
-              src={"/images/gallery-2.png"}
-              width={579}
-              height={579}
-              alt="Product Image"
-              className="rounded-xl mx-auto"
-            />
-          </div>
-          <div className="px-2">
-            <Image
-              src={"/images/gallery-3.png"}
-              width={579}
-              height={570}
-              alt="Product Image"
-              className="rounded-xl mx-auto"
-            />
-          </div>
-          <div className="px-2">
-            <Image
-              src={"/images/gallery-2.png"}
-              width={579}
-              height={579}
-              alt="Product Image"
-              className="rounded-xl mx-auto"
-            />
-          </div>{" "}
+          {gallerySlides.map(({ image }) => (
+            <div key={image} className="p-2">
+              <Image
+                src={image}
+                width={579}
+                height={579}
+                alt="Product Image"
+                className="rounded-xl mx-auto"
+              />
+            </div>
+          ))}
         </SlickSlider>
       </div>
     </div>
@@ -348,43 +344,33 @@ function Gallery() {
 }
 
 function Projects() {
+  const projects = [
+    {
+      image: "/images/project-1.png",
+      title: "INSTALLATION COMPLETE IN ZAMBIA",
+      desc: "Installation Of ; 70 Stroke, 10 Ton Overhead Crane...",
+    },
+    {
+      image: "/images/project-2.png",
+      title: "Elandsfontein",
+      desc: "Give Credit where Credit is due. When life seems to run by us, and we sometimes forget to thank the...",
+    },
+    {
+      image: "/images/project-3.png",
+      title: "MANUFACTURING OF LEG PROTECTERS",
+      desc: "Manufacturing Of Special Racking LEG Protectors...",
+    },
+  ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-10">
       <SectionHeading heading={"Projects"} />
-      <div className="lg:py-20 pt-10 pb-20 overflow-hidden ">
+      <div className=" overflow-hidden mt-14 ">
         <SlickSlider>
-          <div className="p-2">
-            <ProjectCard
-              image={"/images/project-1.png"}
-              title={"INSTALLATION COMPLETE IN ZAMBIA"}
-              desc={"Installation Of ; 70 Stroke, 10 Ton Overhead Crane..."}
-            />
-          </div>
-          <div className="p-2">
-            <ProjectCard
-              image={"/images/project-2.png"}
-              title={"Elandsfontein"}
-              desc={
-                "Give Credit where Credit is due. When life seems to run by us, and we sometimes forget to thank the..."
-              }
-            />
-          </div>
-          <div className="p-2">
-            <ProjectCard
-              image={"/images/project-3.png"}
-              title={"MANUFACTURING OF LEG PROTECTERS"}
-              desc={"Manufacturing Of Special Racking LEG Protectors..."}
-            />
-          </div>
-          <div className="p-2">
-            <ProjectCard
-              image={"/images/project-2.png"}
-              title={"Elandsfontein"}
-              desc={
-                "Give Credit where Credit is due. When life seems to run by us, and we sometimes forget to thank the..."
-              }
-            />
-          </div>
+          {projects.map(({ image, title, desc }) => (
+            <div key={image} className="px-8 py-2">
+              <ProjectCard image={image} title={title} desc={desc} />
+            </div>
+          ))}
         </SlickSlider>
       </div>
     </div>
@@ -393,7 +379,7 @@ function Projects() {
 
 function ProjectCard({ image, title, desc }) {
   return (
-    <div className="flex flex-col rounded-xl shadow-md h-[450px]">
+    <div className="flex flex-col rounded-xl shadow-md h-[450px] transition duration-300 hover:-translate-y-1  hover:shadow-lg cursor-pointer">
       <Image
         src={image}
         height={380}
@@ -416,8 +402,8 @@ function ProjectCard({ image, title, desc }) {
 
 function Testimonials() {
   return (
-    <div className="bg-primary-yellow-dark py-10 lg:my-20 my-10 overflow-hidden">
-      <div className="mb-8">
+    <div className="bg-primary-yellow-dark py-10 overflow-hidden lg:mb-24 mb-10">
+      <div className="mb-10">
         <h1 className="text-center px-8 mb-2 font-bold text-xl lg:text-2xl tracking-wider">
           Testimonials
         </h1>
