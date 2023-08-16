@@ -310,19 +310,19 @@ function ProductsAndServices() {
     },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
       <SectionHeading heading={"Products & Services"} />
-      <div className="mt-14 overflow-hidden">
+      <div className="mt-14 ">
         <SlickSlider>
           {productSlides.map(({ image, service }) => (
-            <div key={image} className="px-2">
-              <div className="relative service-card rounded-xl overflow-hidden">
+            <div key={image} className="p-2">
+              <div className="relative service-card rounded-xl cursor-pointer">
                 <Image
                   src={image}
                   width={578}
                   height={350}
                   alt="Product Image"
-                  className="service-image rounded-xl mx-auto transition duration-300 object-cover scale-105"
+                  className="service-image rounded-xl mx-auto transition duration-300 object-cover"
                 />
                 <div className="service-card__overlay absolute h-full w-full flex items-center justify-center top-0 left-0 bg-black/60 opacity-0 transition duration-300">
                   <h1 className="font-bold text-2xl text-white text-center uppercase">
@@ -349,11 +349,14 @@ function Gallery() {
     {
       image: "/images/gallery-3.png",
     },
+    {
+      image: "/images/gallery-4.png",
+    },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
       <SectionHeading heading={"Gallery"} />
-      <div className="mt-14 overflow-hidden">
+      <div className="mt-14">
         <SlickSlider>
           {gallerySlides.map(({ image }) => (
             <div key={image} className="p-2">
@@ -391,12 +394,12 @@ function Projects() {
     },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
       <SectionHeading heading={"Projects"} />
-      <div className=" overflow-hidden mt-14 ">
+      <div className=" mt-14 ">
         <SlickSlider>
           {projects.map(({ image, title, desc }) => (
-            <div key={image} className="px-8 py-2">
+            <div key={image} className="px-4 py-2">
               <ProjectCard image={image} title={title} desc={desc} />
             </div>
           ))}
@@ -431,7 +434,7 @@ function ProjectCard({ image, title, desc }) {
 
 function Testimonials() {
   return (
-    <div className="bg-primary-yellow-dark py-10 overflow-hidden lg:mb-24 mb-14">
+    <div className="bg-primary-yellow-dark py-10 lg:mb-24 mb-14">
       <div className="mb-10">
         <h1 className="text-center px-8 mb-2 font-bold text-xl lg:text-2xl tracking-wider">
           Testimonials

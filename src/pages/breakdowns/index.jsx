@@ -47,13 +47,3 @@ export default function Breakdowns() {
     </div>
   );
 }
-
-{
-  ` 
-  * 
-  * 
-  * 
-
-
-  * `;
-}
