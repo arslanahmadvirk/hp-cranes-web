@@ -3,30 +3,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
-const nav_links = [
-  {
-    path: "/",
-    link: "Home",
-  },
-  {
-    path: "/services",
-    link: "Product & Services",
-  },
-
-  {
-    path: "/projects",
-    link: "Projects",
-  },
-
-  {
-    path: "/gallery",
-    link: "Gallery",
-  },
-  {
-    path: "/contact",
-    link: "Contact Us",
-  },
-];
 export default function Navbar() {
   return (
     <div className="md:h-32 h-28 bg-primary-yellow-dark shadow-md">
@@ -94,10 +70,11 @@ function SearchInput() {
   );
 }
 
-function BreakdownBtn() {
+function BreakdownBtn({ togglePanel }) {
   return (
     <Link
       href={"/breakdowns"}
+      onClick={togglePanel}
       className="bg-white py-1.5 px-4 rounded-full text-sm font-semibold drop-shadow-md shadow-black hover:text-primary-yellow-dark focus:text-primary-yellow-dark active:scale-95 transition focus:outline-none"
     >
       Breakdowns
@@ -106,9 +83,33 @@ function BreakdownBtn() {
 }
 
 function Navigation() {
+  const navLinks = [
+    {
+      path: "/",
+      link: "Home",
+    },
+    {
+      path: "/services",
+      link: "Product & Services",
+    },
+
+    {
+      path: "/projects",
+      link: "Projects",
+    },
+
+    {
+      path: "/gallery",
+      link: "Gallery",
+    },
+    {
+      path: "/contact",
+      link: "Contact Us",
+    },
+  ];
   return (
     <nav className="2xl:basis-2/5 lg:basis-6/12 basis-8/12 flex justify-between font-medium xl:text-base text-sm">
-      {nav_links.map(({ path, link }) => (
+      {navLinks.map(({ path, link }) => (
         <Link
           key={path}
           href={path}
