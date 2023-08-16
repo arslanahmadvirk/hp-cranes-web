@@ -96,9 +96,12 @@ function SearchInput() {
 
 function BreakdownBtn() {
   return (
-    <button className="bg-white py-1.5 px-4 rounded-full text-sm font-semibold drop-shadow-md shadow-black hover:text-primary-yellow-dark focus:text-primary-yellow-dark active:scale-95 transition focus:outline-none">
+    <Link
+      href={"/breakdowns"}
+      className="bg-white py-1.5 px-4 rounded-full text-sm font-semibold drop-shadow-md shadow-black hover:text-primary-yellow-dark focus:text-primary-yellow-dark active:scale-95 transition focus:outline-none"
+    >
       Breakdowns
-    </button>
+    </Link>
   );
 }
 
