@@ -14,9 +14,8 @@ export default function App({ Component, pageProps }) {
 
   return (
     <main className={`${montserrat.variable} font-montserrat`}>
-      <div className="sticky top-0 z-50 shadow-md">
-        {isMobileScreen ? <MobileNavbar /> : <Navbar />}
-      </div>
+      {isMobileScreen ? <MobileNavbar /> : <Navbar />}
+
       <Component {...pageProps} />
       <Footer />
     </main>

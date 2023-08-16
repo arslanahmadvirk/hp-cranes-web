@@ -1,26 +1,17 @@
+import Hero from "@/components/Hero";
 import ContactUs from "@/components/ContactUs";
 import SectionHeading from "@/components/SectionHeading";
-import Image from "next/image";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Contact() {
   const router = useRouter();
   return (
     <>
-      <div
-        className={
-          "relative bg-hero-2 h-28 md:h-48 lg:h-72 xl:h-80  bg-center bg-cover"
-        }
-      >
-        <div className="absolute top-0 left-0 w-full h-full flex items-center px-8 md:px-12 lg:px-16 xl:px-20 bg-black/60 text-white  text-sm md:text-base">
-          <div>
-            <h1 className="uppercase font-bold lg:text-5xl md:text-4xl text-3xl  mb-4">
-              contact us
-            </h1>
-            <p>Home . Contact Us</p>
-          </div>
-        </div>
-      </div>
+      <Head>
+        <title>Contact Us | HP Cranes</title>
+      </Head>
+      <Hero pageName={"Contact Us"} />
       <div className="mt-24">
         <ContactUs />
       </div>

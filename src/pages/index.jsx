@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 
 import CountUp from "react-countup";
 import SectionHeading from "@/components/SectionHeading";
-import useMediaQuery from "@/hooks/useMediaQuery";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +14,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Home() {
-  const isMobileScreen = useMediaQuery("(max-width: 768px)");
   return (
     <>
       <Head>
@@ -284,12 +282,15 @@ function ProductsAndServices() {
   const productSlides = [
     {
       image: "/images/product-1.png",
+      service: "Cranes",
     },
     {
       image: "/images/product-2.png",
+      service: "Factory Maintenance",
     },
     {
       image: "/images/product-3.png",
+      service: "Construction",
     },
   ];
   return (
@@ -297,15 +298,22 @@ function ProductsAndServices() {
       <SectionHeading heading={"Products & Services"} />
       <div className="mt-14 overflow-hidden">
         <SlickSlider>
-          {productSlides.map(({ image }) => (
+          {productSlides.map(({ image, service }) => (
             <div key={image} className="px-2">
-              <Image
-                src={image}
-                width={578}
-                height={350}
-                alt="Product Image"
-                className="rounded-xl mx-auto"
-              />
+              <div className="relative service-card rounded-xl overflow-hidden">
+                <Image
+                  src={image}
+                  width={578}
+                  height={350}
+                  alt="Product Image"
+                  className="service-image rounded-xl mx-auto transition duration-300 object-cover scale-105"
+                />
+                <div className="service-card__overlay absolute h-full w-full flex items-center justify-center top-0 left-0 bg-black/60 opacity-0 transition duration-300">
+                  <h1 className="font-bold text-2xl text-white text-center uppercase">
+                    {service}
+                  </h1>
+                </div>
+              </div>
             </div>
           ))}
         </SlickSlider>
