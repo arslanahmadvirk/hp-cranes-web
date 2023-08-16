@@ -281,16 +281,32 @@ function Statistics() {
 function ProductsAndServices() {
   const productSlides = [
     {
-      image: "/images/product-1.png",
+      image: "/images/products/product-1.png",
       service: "Cranes",
     },
     {
-      image: "/images/product-2.png",
+      image: "/images/products/product-2.png",
       service: "Factory Maintenance",
     },
     {
-      image: "/images/product-3.png",
+      image: "/images/products/product-3.png",
       service: "Construction",
+    },
+    {
+      image: "/images/products/product-4.png",
+      service: "Electrical",
+    },
+    {
+      image: "/images/products/product-5.png",
+      service: "Sling Inspection",
+    },
+    {
+      image: "/images/products/product-6.png",
+      service: "Radio Button Controller",
+    },
+    {
+      image: "/images/products/product-7.png",
+      service: "Rates",
     },
   ];
   return (

@@ -50,7 +50,7 @@ export default function MobileNavbar() {
   return (
     <>
       <div className=" h-20 bg-primary-yellow-dark overflow-hidden">
-        <SidePanel show={isOpen} />
+        <SidePanel show={isOpen} togglePanel={togglePanel} />
         <div className="mx-5 py-5 flex justify-between items-center ">
           <Image
             src={"/images/company-logo.png"}
@@ -81,7 +81,7 @@ export default function MobileNavbar() {
   );
 }
 
-function SidePanel({ show }) {
+function SidePanel({ show, togglePanel }) {
   return (
     <div
       className={`w-screen h-screen fixed top-0 left-0 z-50 yellow-gradient transition-transform duration-500 ${
@@ -99,7 +99,11 @@ function SidePanel({ show }) {
                   show ? "translate-x-0" : "translate-x-full"
                 }`}
               >
-                <Link href={path} className="font-medium focus:outline-none">
+                <Link
+                  onClick={togglePanel}
+                  href={path}
+                  className="font-medium focus:outline-none"
+                >
                   {link}
                 </Link>
               </li>
