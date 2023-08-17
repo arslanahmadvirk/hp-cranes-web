@@ -349,9 +349,6 @@ function Gallery() {
     {
       image: "/images/gallery-3.png",
     },
-    {
-      image: "/images/gallery-4.png",
-    },
   ];
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
