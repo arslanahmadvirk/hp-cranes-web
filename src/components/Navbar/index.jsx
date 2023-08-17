@@ -5,7 +5,7 @@ import { FiSearch } from "react-icons/fi";
 
 export default function Navbar() {
   return (
-    <div className="md:h-32 h-28 bg-primary-yellow-dark shadow-md">
+    <div id="Navbar" className="md:h-32 h-28 bg-primary-yellow-dark shadow-md">
       <div className="container 2xl:max-w-screen-2xl mx-auto">
         <div className="flex justify-between items-center gap-6 py-2 border-b border-white/50">
           <div className="inline-flex lg:gap-12 gap-6 justify-between text-sm font-medium">
@@ -56,7 +56,7 @@ function SearchInput({ padding = "py-1.5 px-4" }) {
         placeholder="Search"
         name="search-query"
         value={searchQuery}
-        className={`${padding} pr-12 rounded-full drop-shadow-md shadow-black lg:w-64 md:w-56 w-48 text-sm outline-primary-yellow-dark`}
+        className={`${padding} pr-12 rounded-full drop-shadow-md shadow-black lg:w-64 w-56 text-sm outline-primary-yellow-dark`}
         onChange={handleSearchQuery}
         onKeyDown={handleKeyPress}
       />

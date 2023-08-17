@@ -94,7 +94,7 @@ export default function Footer() {
       </div>
       <h5 className="font-medium text-center text-xs lg:text-sm px-8">
         Copyright © 2023
-        <span className="underline underline-offset-2">
+        <span className="underline underline-offset-2 mx-2">
           HP CRANES CONSULTING CC
         </span>{" "}
         - Get Hooked

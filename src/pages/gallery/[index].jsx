@@ -1,14 +1,21 @@
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import SlickSlider from "@/components/SlickSlider";
+import WebLayout from "@/layouts/WebLayout";
+import Head from "next/head";
 import Image from "next/image";
 
 export default function GalleryPage() {
   return (
     <>
-      <Hero pageName={"Cranes"} />
-      <GalleryGrid />
-      <GallerySlider />
+      <Head>
+        <title>Gallery | HP Cranes</title>
+      </Head>
+      <WebLayout>
+        <Hero pageName={"Cranes"} />
+        <GalleryGrid />
+        <GallerySlider />
+      </WebLayout>
     </>
   );
 }

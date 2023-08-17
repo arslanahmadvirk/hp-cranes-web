@@ -28,7 +28,10 @@ export default function MobileNavbar() {
 
   return (
     <>
-      <div className="relative h-20 bg-primary-yellow-dark overflow-hidden">
+      <div
+        id="Navbar"
+        className="relative h-20 bg-primary-yellow-dark overflow-hidden"
+      >
         <SidePanel show={isOpen} togglePanel={togglePanel} />
         <div className="mx-5 py-5 flex justify-between items-center ">
           <Image

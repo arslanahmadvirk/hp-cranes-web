@@ -13,21 +13,25 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import WebLayout from "@/layouts/WebLayout";
+
 export default function Home() {
   return (
     <>
       <Head>
         <title>Home | HP Cranes</title>
       </Head>
-      <Hero />
-      <AboutUs />
-      <ProductsAndServices />
-      <Statistics />
-      <Gallery />
-      <WhyChooseUs />
-      <Projects />
-      <Testimonials />
-      <ContactUs />
+      <WebLayout>
+        <Hero />
+        <AboutUs />
+        <ProductsAndServices />
+        <Statistics />
+        <Gallery />
+        <WhyChooseUs />
+        <Projects />
+        <Testimonials />
+        <ContactUs />
+      </WebLayout>
     </>
   );
 }
@@ -324,7 +328,7 @@ function ProductsAndServices() {
                   alt="Product Image"
                   className="service-image rounded-xl mx-auto transition duration-300 object-cover"
                 />
-                <div className="service-card__overlay absolute h-full w-full flex items-center justify-center top-0 left-0 bg-black/60 opacity-0 transition duration-300">
+                <div className="service-card__overlay absolute h-full w-full flex items-center justify-center top-0 left-0 bg-black/60 opacity-0 rounded-xl transition duration-300">
                   <h1 className="font-bold text-2xl text-white text-center uppercase">
                     {service}
                   </h1>
