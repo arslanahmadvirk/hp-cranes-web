@@ -12,6 +12,9 @@
   body {
     @apply overflow-x-hidden;
   }
+  * {
+    @apply transition-all duration-300;
+  }
   .yellow-gradient {
     @apply bg-gradient-to-b from-[#FFCB3C] to-[#E3A804];
   }

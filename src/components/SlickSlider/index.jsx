@@ -2,12 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function SlickSlider({ children }) {
+export default function SlickSlider({ visibleSlides = 3, children }) {
   return (
     <Slider
       centerMode={true}
       accessibility={true}
-      slidesToShow={3}
+      slidesToShow={visibleSlides}
       slidesToScroll={1}
       autoplay={true}
       autoplaySpeed={5000}
