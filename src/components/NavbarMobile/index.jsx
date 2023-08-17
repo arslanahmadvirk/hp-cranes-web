@@ -60,11 +60,11 @@ export default function MobileNavbar() {
           </div>
         </div>
         <div
-          className={`absolute left-0 top-0 h-full w-full px-4 bg-primary-yellow-dark flex items-center ${
+          className={`absolute left-0 top-0 h-full w-4/5 px-4 bg-primary-yellow-dark flex items-center ${
             isSearchOpen ? "opacity-100" : "opacity-0"
           }`}
         >
-          <SearchInput />
+          <SearchInput padding="py-2 px-4" />
         </div>
       </div>
     </>
@@ -78,7 +78,7 @@ function SidePanel({ show, togglePanel }) {
       link: "Home",
     },
     {
-      path: "/services",
+      path: "/ProductsAndServices",
       link: "Product & Services",
     },
 

@@ -19,7 +19,7 @@ export default function Hero({ pageName }) {
           <h1 className="uppercase font-bold lg:text-5xl md:text-4xl text-3xl  mb-4">
             {pageName}
           </h1>
-          <p>
+          <p className="md:text-base text-xs">
             {pathSegments.map((segment, index) => (
               <>
                 <Link href={`/`} className="hover:underline capitalize">

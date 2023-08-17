@@ -34,7 +34,7 @@ export default function Navbar() {
   );
 }
 
-function SearchInput() {
+function SearchInput({ padding = "py-1.5 px-4" }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchQuery = (e) => {
@@ -56,7 +56,7 @@ function SearchInput() {
         placeholder="Search"
         name="search-query"
         value={searchQuery}
-        className="py-1.5 px-4 pr-12 rounded-full drop-shadow-md shadow-black w-64 text-sm outline-primary-yellow-dark"
+        className={`${padding} pr-12 rounded-full drop-shadow-md shadow-black lg:w-64 md:w-56 w-48 text-sm outline-primary-yellow-dark`}
         onChange={handleSearchQuery}
         onKeyDown={handleKeyPress}
       />
@@ -89,7 +89,7 @@ function Navigation() {
       link: "Home",
     },
     {
-      path: "/services",
+      path: "/ProductsAndServices",
       link: "Product & Services",
     },
 

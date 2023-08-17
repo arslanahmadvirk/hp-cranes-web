@@ -16,7 +16,8 @@ export default function GalleryPage() {
 function GalleryGrid() {
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto lg:py-24 py-14 overflow-hidden">
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 md:grid-rows-3 grid-rows-2 grid-cols-2 gap-4">
+      <SectionHeading heading={"Cranes"} />
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 md:grid-rows-3 grid-rows-2 grid-cols-2 mt-14 gap-4">
         <Image
           src={"/images/gallery/crane-1.png"}
           alt="Crane Image"
