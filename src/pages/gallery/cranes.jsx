@@ -5,7 +5,7 @@ import WebLayout from "@/layouts/WebLayout";
 import Head from "next/head";
 import Image from "next/image";
 
-export default function GalleryPage() {
+export default function CranesGallery() {
   return (
     <>
       <Head>

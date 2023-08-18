@@ -287,30 +287,37 @@ function ProductsAndServices() {
     {
       image: "/images/products/cranes.png",
       service: "Cranes",
+      path: "product_&_services/cranes",
     },
     {
       image: "/images/products/factory-maintenance.png",
       service: "Factory Maintenance",
+      path: "product_&_services/factory_maintenance",
     },
     {
       image: "/images/products/construction.png",
       service: "Construction",
+      path: "product_&_services/construction",
     },
     {
       image: "/images/products/electrical.png",
       service: "Electrical",
+      path: "product_&_services/electrical",
     },
     {
       image: "/images/products/sling-inspection.png",
       service: "Sling Inspection",
+      path: "product_&_services/sling_inspection",
     },
     {
       image: "/images/products/radio-control-system.png",
       service: "Radio Button Controller",
+      path: "product_&_services/radio_control_system",
     },
     {
       image: "/images/products/rates.png",
       service: "Rates",
+      path: "product_&_services/rates",
     },
   ];
   return (
@@ -318,22 +325,24 @@ function ProductsAndServices() {
       <SectionHeading heading={"Products & Services"} />
       <div className="mt-14 ">
         <SlickSlider>
-          {productSlides.map(({ image, service }) => (
+          {productSlides.map(({ image, service, path }) => (
             <div key={image} className="p-2">
-              <div className="relative service-card rounded-xl cursor-pointer">
-                <Image
-                  src={image}
-                  width={578}
-                  height={350}
-                  alt="Product Image"
-                  className="service-image rounded-xl mx-auto transition duration-300 object-cover"
-                />
-                <div className="service-card__overlay absolute h-full w-full flex items-center justify-center top-0 left-0 bg-black/60 opacity-0 rounded-xl transition duration-300">
-                  <h1 className="font-bold text-2xl text-white text-center uppercase">
-                    {service}
-                  </h1>
+              <Link href={path}>
+                <div className="relative service-card rounded-xl cursor-pointer">
+                  <Image
+                    src={image}
+                    width={578}
+                    height={350}
+                    alt="Product Image"
+                    className="service-image rounded-xl mx-auto transition duration-300 object-cover"
+                  />
+                  <div className="service-card__overlay absolute h-full w-full flex items-center justify-center top-0 left-0 bg-black/60 opacity-0 rounded-xl transition duration-300">
+                    <h1 className="font-bold text-2xl text-white text-center uppercase">
+                      {service}
+                    </h1>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </SlickSlider>

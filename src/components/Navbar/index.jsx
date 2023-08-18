@@ -89,7 +89,7 @@ function Navigation() {
       link: "Home",
     },
     {
-      path: "//products_&_services",
+      path: "/product_&_services",
       link: "Product & Services",
     },
 
