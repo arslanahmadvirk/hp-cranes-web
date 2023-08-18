@@ -19,7 +19,7 @@ export default function RadioControlSystem() {
             <div className="flex flex-wrap lg:flex-nowrap justify-between items-center mt-14 gap-12">
               <div className="lg:w-1/2 w-full mx-5 lg:mx-0">
                 <Image
-                  src={"/images/products/radio-control-System.png"}
+                  src={"/images/products/radio-control-system.png"}
                   alt="radio-control-System Image"
                   height={543}
                   width={943}

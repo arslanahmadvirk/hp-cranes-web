@@ -7,32 +7,32 @@ export default function ProductsAndServices() {
   const categories = [
     {
       name: "crane",
-      path: "/ProductsAndServices/cranes",
+      path: "product_&_services/cranes",
     },
     {
       name: "sling inspection",
-      path: "/ProductsAndServices/slings",
+      path: "product_&_services/sling_inspection",
     },
 
     {
       name: "electrical",
-      path: "/ProductsAndServices/electrical",
+      path: "product_&_services/electrical",
     },
     {
       name: "factory maintenance",
-      path: "/ProductsAndServices/maintenance",
+      path: "product_&_services/factory_maintenance",
     },
     {
       name: "radio control system",
-      path: "/ProductsAndServices/rcs",
+      path: "product_&_services/radio_control_system",
     },
     {
       name: "construction",
-      path: "/ProductsAndServices/construction",
+      path: "product_&_services/construction",
     },
     {
       name: "rates",
-      path: "/ProductsAndServices/rates",
+      path: "product_&_services/rates",
     },
   ];
   return (

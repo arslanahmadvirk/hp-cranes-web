@@ -4,7 +4,7 @@ import React from "react";
 import { BsDot } from "react-icons/bs";
 export default function Hero({ pageName }) {
   const router = useRouter();
-  const pathSegments = router.asPath.split("/");
+  const pathSegments = router.pathname.split("/");
   return (
     <div
       className={`relative ${
@@ -21,16 +21,23 @@ export default function Hero({ pageName }) {
           </h1>
           <p className="md:text-base text-xs">
             {pathSegments.map((segment, index) => (
-              <>
-                <Link href={`/`} className="hover:underline capitalize">
-                  {segment === "" ? "Home" : segment}
+              <span key={index}>
+                <Link
+                  href={`/${pathSegments.slice(0, index + 1).join("/")}`}
+                  className="hover:underline capitalize"
+                >
+                  {segment === ""
+                    ? "Home"
+                    : segment.includes("_")
+                    ? segment.split("_").join(" ")
+                    : segment}
                 </Link>
                 <BsDot
                   className={`inline h-8 w-8 ${
                     index === pathSegments.length - 1 && "hidden"
                   }`}
                 />
-              </>
+              </span>
             ))}
           </p>
         </div>

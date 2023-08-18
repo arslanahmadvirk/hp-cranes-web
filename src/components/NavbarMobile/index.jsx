@@ -81,7 +81,7 @@ function SidePanel({ show, togglePanel }) {
       link: "Home",
     },
     {
-      path: "/ProductsAndServices",
+      path: "/products_&_services",
       link: "Product & Services",
     },
 
