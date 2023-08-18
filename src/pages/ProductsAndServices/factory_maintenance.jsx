@@ -5,22 +5,22 @@ import WebLayout from "@/layouts/WebLayout";
 import Head from "next/head";
 import Image from "next/image";
 
-export default function ProductPage() {
+export default function Cranes() {
   return (
     <>
       <Head>
-        <title>Product & Services | HP Cranes</title>
+        <title>Factory Maintenance | HP Cranes</title>
       </Head>
       <WebLayout>
         <div className=" 2xl:max-w-screen-2xl mx-auto">
           <Hero pageName={"Product & Services"} />
           <div className="container mx-auto my-24">
-            <SectionHeading heading={"Cranes"} />
+            <SectionHeading heading={"Factory Maintenance"} />
             <div className="flex flex-wrap lg:flex-nowrap justify-between items-center mt-14 gap-12">
               <div className="lg:w-1/2 w-full mx-5 lg:mx-0">
                 <Image
-                  src={"/images/products/cranes.png"}
-                  alt="Breakdowns Image"
+                  src={"/images/products/factory-maintenance.png"}
+                  alt="Factory Maintenance Image"
                   height={543}
                   width={943}
                   className="w-full rounded-xl"
@@ -28,28 +28,17 @@ export default function ProductPage() {
               </div>
               <div className="lg:w-1/2 w-full lg:mx-0 mx-10">
                 <ul className="list-disc mb-12 space-y-4 font-medium">
+                  <li>Lathe Repairs</li>
+                  <li>Guillotines</li>
+                  <li>Pumps</li>
+                  <li>Saws</li>
+                  <li>A.C. and D.C. Drives</li>
                   <li>
-                    Crane Manufacturing Any crane up to 20 ton single and double
-                    girders.
+                    Conveyors and Material Handling Equipment, REPAIRS AND
+                    INSTALLATION
                   </li>
-                  <li>
-                    Crane Modifications Upgrading and Modernizing of all types
-                    of cranes.
-                  </li>
-                  <li>
-                    Erection and take down of cranes, complete rigging
-                    facility’s.
-                  </li>
-                  <li>
-                    Service Service of all types of cranes with all
-                    documentation and repairs.
-                  </li>
-                  <li>Load Test We do load tests. Water or solid weights.</li>
-                  <li>
-                    Experience on Following– Cranes Demag, Condra, Morris,
-                    Verlinde, Lasch, Wolf, Koni, Sachmech etc– Hoists Elephant,
-                    Toco, Kito, Rope Master, Kukdong, Nitchi, etc.
-                  </li>
+                  <li>Building</li>
+                  <li>Welding Machine Repairs</li>
                 </ul>
               </div>
             </div>
@@ -60,13 +49,13 @@ export default function ProductPage() {
     </>
   );
 }
-
 {
   `
 
 
 
 
+Building
 `;
 }
 

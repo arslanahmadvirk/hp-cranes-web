@@ -15,7 +15,7 @@ export default function ProductsAndServices() {
     },
 
     {
-      name: "electrical images",
+      name: "electrical",
       path: "/ProductsAndServices/electrical",
     },
     {
@@ -24,7 +24,7 @@ export default function ProductsAndServices() {
     },
     {
       name: "radio control system",
-      path: "/ProductsAndServices/rdc",
+      path: "/ProductsAndServices/rcs",
     },
     {
       name: "construction",
