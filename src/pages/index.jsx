@@ -1,7 +1,5 @@
 import ContactUs from "@/components/ContactUs";
-import Footer from "@/components/Footer";
-
-import CountUp from "react-countup";
+import CountUp, { useCountUp } from "react-countup";
 import SectionHeading from "@/components/SectionHeading";
 import Head from "next/head";
 import Image from "next/image";
@@ -260,8 +258,13 @@ function Statistics() {
     { item_name: "Workers Employed", value: 984 },
     { item_name: "Awards Won", value: 96 },
   ];
+  useCountUp({
+    ref: "counter",
+    enableScrollSpy: true,
+    scrollSpyDelay: 1000,
+  });
   return (
-    <div className="lg:mb-24 mb-14">
+    <div id="statistics" className="lg:mb-24 mb-14">
       <div className="bg-statistics bg-cover bg-center">
         <div className="relative top-0 py-16 bg-black/80">
           <div className="container 2xl:max-w-screen-2xl mx-auto">
@@ -269,7 +272,7 @@ function Statistics() {
               {statistics.map(({ item_name, value }, index) => (
                 <div key={index} className="text-white text-center">
                   <h1 className="text-4xl font-bold mb-4">
-                    <CountUp end={value} duration={3} />
+                    <CountUp end={value} duration={3} enableScrollSpy />
                   </h1>
                   <h4 className="text-sm md:text-lg">{item_name}</h4>
                 </div>
