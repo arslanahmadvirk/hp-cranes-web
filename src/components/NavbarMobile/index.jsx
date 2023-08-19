@@ -43,7 +43,7 @@ export default function MobileNavbar() {
           />
 
           <div className="flex items-center gap-4">
-            <button onClick={toggleSearch} className="z-[9999]">
+            <button onClick={toggleSearch} className="z-40">
               {isSearchOpen ? (
                 <BiX className="w-10 h-10" />
               ) : (

@@ -12,8 +12,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import WebLayout from "@/layouts/WebLayout";
+import useIntersection from "@/hooks/useIntersection";
 
 export default function Home() {
+  const isIntersecting = useIntersection("contactUs");
   return (
     <>
       <Head>
@@ -28,7 +30,16 @@ export default function Home() {
         <WhyChooseUs />
         <Projects />
         <Testimonials />
-        <ContactUs />
+        <div
+          id="contactUs"
+          className={`transition duration-1000 ease-out ${
+            isIntersecting
+              ? "translate-y-0 opacity-100"
+              : "translate-y-10 opacity-0"
+          }`}
+        >
+          <ContactUs />
+        </div>
       </WebLayout>
     </>
   );
@@ -97,6 +108,8 @@ function Hero() {
 }
 
 function AboutUs() {
+  const isIntersecting = useIntersection("aboutUs");
+
   const recent_posts = [
     "WORK DIRECTOR ACHIEVES ELECTRICAL RED SEAL DIPLOMA",
     " INSTALLATION COMPLETE IN ZAMBIA",
@@ -107,7 +120,11 @@ function AboutUs() {
   return (
     <div
       id="aboutUs"
-      className="container 2xl:max-w-screen-2xl mx-auto lg:my-24 my-14"
+      className={`container 2xl:max-w-screen-2xl mx-auto lg:my-24 my-14 transition duration-1000 ease-out ${
+        isIntersecting
+          ? "translate-y-0 opacity-100"
+          : "translate-y-10 opacity-0"
+      }`}
     >
       <div className="flex lg:flex-row flex-col justify-between gap-20 lg:mx-10">
         <div className="basis-8/12 mx-6 lg:mx-0">
@@ -202,8 +219,16 @@ function AboutUs() {
 }
 
 function WhyChooseUs() {
+  const isIntersecting = useIntersection("WhyChooseUs");
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14">
+    <div
+      id="WhyChooseUs"
+      className={`container 2xl:max-w-screen-2xl mx-auto lg:mb-24 mb-14 transition duration-1000 ease-out ${
+        isIntersecting
+          ? "translate-y-0 opacity-100"
+          : "translate-y-10 opacity-0"
+      }`}
+    >
       <SectionHeading heading={"Why Choose HP Cranes ?"} />
       <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-20 justify-between items-center mx-5 mt-14">
         <div className="lg:basis-1/2 basis-full ">
@@ -286,6 +311,7 @@ function Statistics() {
 }
 
 function ProductsAndServices() {
+  const isIntersecting = useIntersection("product&Services");
   const productSlides = [
     {
       image: "/images/products/cranes.png",
@@ -324,7 +350,14 @@ function ProductsAndServices() {
     },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
+    <div
+      id="product&Services"
+      className={`container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden transition duration-1000 ease-out ${
+        isIntersecting
+          ? "translate-y-0 opacity-100"
+          : "translate-y-10 opacity-0"
+      }`}
+    >
       <SectionHeading heading={"Products & Services"} />
       <div className="mt-14 ">
         <SlickSlider>
@@ -350,11 +383,20 @@ function ProductsAndServices() {
           ))}
         </SlickSlider>
       </div>
+      <div className="text-center mt-14">
+        <Link
+          href={"/product_&_services"}
+          className="py-2 lg:px-12 px-8 rounded-full font-semibold bg-primary-yellow hover:bg-primary-yellow-dark active:scale-95 transition focus:outline-none"
+        >
+          View More
+        </Link>
+      </div>
     </div>
   );
 }
 
 function Gallery() {
+  const isIntersecting = useIntersection("gallery");
   const gallerySlides = [
     {
       image: "/images/gallery-1.png",
@@ -367,7 +409,14 @@ function Gallery() {
     },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
+    <div
+      id="gallery"
+      className={`container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden transition duration-1000 ease-out ${
+        isIntersecting
+          ? "translate-y-0 opacity-100"
+          : "translate-y-10 opacity-0"
+      }`}
+    >
       <SectionHeading heading={"Gallery"} />
       <div className="mt-14">
         <SlickSlider>
@@ -389,6 +438,7 @@ function Gallery() {
 }
 
 function Projects() {
+  const isIntersecting = useIntersection("projects");
   const projects = [
     {
       image: "/images/project-1.png",
@@ -407,7 +457,14 @@ function Projects() {
     },
   ];
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
+    <div
+      id="projects"
+      className={`container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden transition duration-1000 ease-out ${
+        isIntersecting
+          ? "translate-y-0 opacity-100"
+          : "translate-y-10 opacity-0"
+      }`}
+    >
       <SectionHeading heading={"Projects"} />
       <div className=" mt-14 ">
         <SlickSlider>
@@ -446,8 +503,16 @@ function ProjectCard({ image, title, desc }) {
 }
 
 function Testimonials() {
+  const isIntersecting = useIntersection("testimonials");
   return (
-    <div className="bg-primary-yellow-dark py-10 lg:mb-24 mb-14">
+    <div
+      id="testimonials"
+      className={`bg-primary-yellow-dark py-10 lg:mb-24 mb-14 transition duration-1000 ease-out ${
+        isIntersecting
+          ? "translate-y-0 opacity-100"
+          : "translate-y-10 opacity-0"
+      }`}
+    >
       <div className="mb-10">
         <h1 className="text-center px-8 mb-2 font-bold text-xl lg:text-2xl tracking-wider">
           Testimonials

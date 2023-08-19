@@ -22,7 +22,7 @@ export default function BackToTop({}) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isVisible]);
 
   return (
     <button
@@ -31,7 +31,7 @@ export default function BackToTop({}) {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <BsArrowUp className="w-8 h-8" />
+      <BsArrowUp className="lg:w-8 lg:h-8 w-6 h-6" />
     </button>
   );
 }
