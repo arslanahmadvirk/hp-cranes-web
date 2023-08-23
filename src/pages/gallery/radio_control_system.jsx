@@ -59,7 +59,6 @@ export default function CranesGallery() {
       <WebLayout>
         <Hero pageName={"Radio Control System"} />
         <GalleryGrid galleryName={"Radio Control System"} images={rcsImages} />
-        {/* <GallerySlider /> */}
       </WebLayout>
     </>
   );
