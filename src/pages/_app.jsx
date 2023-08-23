@@ -1,8 +1,5 @@
-import BackToTop from "@/components/BackToTop";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import MobileNavbar from "@/components/NavbarMobile";
 import "@/styles/globals.css";
+import "yet-another-react-lightbox/styles.css";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({

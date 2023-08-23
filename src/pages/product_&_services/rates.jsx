@@ -43,64 +43,7 @@ export default function Construction() {
             </div>
           </div>
         </div>
-        <GallerySlider />
       </WebLayout>
     </>
-  );
-}
-
-{
-  `
-  
-    After-Hour Call-out
-    `;
-}
-
-function GallerySlider() {
-  const gallerySlides = [
-    {
-      image: "/images/gallery/slider-1.png",
-    },
-    {
-      image: "/images/gallery/slider-2.png",
-    },
-    {
-      image: "/images/gallery/slider-3.png",
-    },
-    {
-      image: "/images/gallery/slider-4.png",
-    },
-    {
-      image: "/images/gallery/slider-5.png",
-    },
-    {
-      image: "/images/gallery/slider-6.png",
-    },
-    {
-      image: "/images/gallery/slider-7.png",
-    },
-    {
-      image: "/images/gallery/slider-8.png",
-    },
-  ];
-  return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
-      <SectionHeading heading={"Images"} />
-      <div className="mt-14">
-        <SlickSlider>
-          {gallerySlides.map(({ image }) => (
-            <div key={image} className="p-2">
-              <Image
-                src={image}
-                width={579}
-                height={579}
-                alt="Product Image"
-                className="rounded-xl mx-auto"
-              />
-            </div>
-          ))}
-        </SlickSlider>
-      </div>
-    </div>
   );
 }

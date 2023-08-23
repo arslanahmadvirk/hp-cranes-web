@@ -9,10 +9,10 @@ export default function CranesGallery() {
   return (
     <>
       <Head>
-        <title>Cranes Gallery | HP Cranes</title>
+        <title>Construction Gallery | HP Cranes</title>
       </Head>
       <WebLayout>
-        <Hero pageName={"Cranes"} />
+        <Hero pageName={"Construction"} />
         <GalleryGrid />
         <GallerySlider />
       </WebLayout>
@@ -23,7 +23,7 @@ export default function CranesGallery() {
 function GalleryGrid() {
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto lg:py-24 py-14 overflow-hidden">
-      <SectionHeading heading={"Cranes"} />
+      <SectionHeading heading={"Construction"} />
       <div className="grid lg:grid-cols-4 md:grid-cols-3 md:grid-rows-3 grid-rows-2 grid-cols-2 mt-14 gap-4">
         <Image
           src={"/images/gallery/crane-1.png"}
@@ -95,19 +95,22 @@ function GalleryGrid() {
 function GallerySlider() {
   const gallerySlides = [
     {
-      image: "/images/gallery/cranes/crane-1.png",
+      image: "/images/gallery/construction/construction-6.png",
     },
     {
-      image: "/images/gallery/cranes/crane-2.png",
+      image: "/images/gallery/construction/construction-7.png",
     },
     {
-      image: "/images/gallery/cranes/crane-3.png",
+      image: "/images/gallery/construction/construction-8.png",
     },
     {
-      image: "/images/gallery/cranes/crane-4.png",
+      image: "/images/gallery/construction/construction-9.png",
     },
     {
-      image: "/images/gallery/cranes/crane-5.png",
+      image: "/images/gallery/construction/construction-10.png",
+    },
+    {
+      image: "/images/gallery/construction/construction-11.png",
     },
   ];
   return (

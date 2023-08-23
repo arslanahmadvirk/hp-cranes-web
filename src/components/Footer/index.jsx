@@ -61,7 +61,12 @@ export default function Footer() {
         <div className="basis-4/12 ">
           <h2 className="font-bold lg:text-lg text-xl mb-4">Social Links</h2>
           <div className="flex justify-between mb-8 w-4/5">
-            <Link href={"/"} target="_blank">
+            <Link
+              href={
+                "https://www.facebook.com/people/HP-Cranes-Consulting/100063529211823"
+              }
+              target="_blank"
+            >
               <FaFacebookF className="w-6 h-6 inline-block" />
             </Link>
             <Link href={"/"} target="_blank">
@@ -73,13 +78,23 @@ export default function Footer() {
             <Link href={"/"} target="_blank">
               <FaDribbble className="w-6 h-6 inline-block" />
             </Link>
-            <Link href={"/"} target="_blank">
+            <Link
+              href={
+                "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second"
+              }
+              target="_blank"
+            >
               <FaGooglePlusG className="w-6 h-6 inline-block" />
             </Link>
             <Link href={"/"} target="_blank">
               <FaGithub className="w-6 h-6 inline-block" />
             </Link>
-            <Link href={"/"} target="_blank">
+            <Link
+              href={
+                "https://www.linkedin.com/authwall?trk=qf&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2F"
+              }
+              target="_blank"
+            >
               <FaLinkedinIn className="w-6 h-6 inline-block" />
             </Link>
           </div>

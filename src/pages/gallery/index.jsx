@@ -20,19 +20,15 @@ export default function Gallery() {
     },
     {
       name: "factory maintenance",
-      path: "/gallery/maintenance",
+      path: "/gallery/factory_maintenance",
     },
     {
       name: "radio control system",
-      path: "/gallery/rdc",
+      path: "/gallery/radio_control_system",
     },
     {
       name: "construction",
       path: "/gallery/construction",
-    },
-    {
-      name: "rates",
-      path: "/gallery/rates",
     },
   ];
   return (
