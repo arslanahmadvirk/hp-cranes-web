@@ -34,13 +34,15 @@ export default function MobileNavbar() {
       >
         <SidePanel show={isOpen} togglePanel={togglePanel} />
         <div className="mx-5 py-5 flex justify-between items-center ">
-          <Image
-            src={"/images/company-logo.png"}
-            height={95}
-            width={399}
-            alt="Company Logo"
-            className="sm:w-48 w-40"
-          />
+          <Link href={"/"}>
+            <Image
+              src={"/images/company-logo.png"}
+              height={95}
+              width={399}
+              alt="Company Logo"
+              className="sm:w-48 w-40"
+            />
+          </Link>
 
           <div className="flex items-center gap-4">
             <button onClick={toggleSearch} className="z-40">
@@ -63,8 +65,8 @@ export default function MobileNavbar() {
           </div>
         </div>
         <div
-          className={`absolute left-0 top-0 h-full w-4/5 px-4 bg-primary-yellow-dark flex items-center ${
-            isSearchOpen ? "opacity-100" : "opacity-0"
+          className={`absolute left-0 top-0 h-full w-4/5 px-4 bg-primary-yellow-dark flex items-center transition-all duration-200 ${
+            isSearchOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
           <SearchInput padding="py-2 px-4" />

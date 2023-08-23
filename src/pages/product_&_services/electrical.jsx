@@ -58,43 +58,36 @@ export default function Electrical() {
 function GallerySlider() {
   const gallerySlides = [
     {
-      image: "/images/gallery/slider-1.png",
+      image: "/images/gallery/electrical/electrical-1.png",
     },
     {
-      image: "/images/gallery/slider-2.png",
+      image: "/images/gallery/electrical/electrical-5.png",
     },
     {
-      image: "/images/gallery/slider-3.png",
+      image: "/images/gallery/electrical/electrical-7.png",
     },
     {
-      image: "/images/gallery/slider-4.png",
+      image: "/images/gallery/electrical/electrical-9.png",
     },
     {
-      image: "/images/gallery/slider-5.png",
+      image: "/images/gallery/electrical/electrical-11.png",
     },
     {
-      image: "/images/gallery/slider-6.png",
-    },
-    {
-      image: "/images/gallery/slider-7.png",
-    },
-    {
-      image: "/images/gallery/slider-8.png",
+      image: "/images/gallery/electrical/electrical-13.png",
     },
   ];
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
-      <SectionHeading heading={"Images"} />
       <div className="mt-14">
         <SlickSlider>
           {gallerySlides.map(({ image }) => (
             <div key={image} className="p-2">
               <Image
                 src={image}
-                width={579}
-                height={579}
+                width={578}
+                height={350}
                 alt="Product Image"
-                className="rounded-xl mx-auto"
+                className="rounded-xl object-cover aspect-video mx-auto"
               />
             </div>
           ))}

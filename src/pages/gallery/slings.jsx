@@ -115,10 +115,10 @@ function GallerySlider() {
             <div key={image} className="p-2">
               <Image
                 src={image}
-                width={579}
-                height={579}
+                width={578}
+                height={350}
                 alt="Product Image"
-                className="rounded-xl mx-auto"
+                className="rounded-xl object-cover aspect-video mx-auto"
               />
             </div>
           ))}
