@@ -1,3 +1,4 @@
+import { GalleryGrid } from "@/components/GalleryGrid";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import SlickSlider from "@/components/SlickSlider";
@@ -6,6 +7,74 @@ import Head from "next/head";
 import Image from "next/image";
 
 export default function CranesGallery() {
+  const constructionImages = [
+    {
+      src: "/images/gallery/construction/construction-1.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 1",
+    },
+    {
+      src: "/images/gallery/construction/construction-2.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 2",
+    },
+    {
+      src: "/images/gallery/construction/construction-3.png",
+      height: "768",
+      width: "576",
+      alt: "Construction Image 3",
+    },
+    {
+      src: "/images/gallery/construction/construction-4.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 4",
+    },
+    {
+      src: "/images/gallery/construction/construction-5.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 5",
+    },
+    {
+      src: "/images/gallery/construction/construction-6.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 6",
+    },
+    {
+      src: "/images/gallery/construction/construction-7.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 7",
+    },
+    {
+      src: "/images/gallery/construction/construction-8.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 8",
+    },
+    {
+      src: "/images/gallery/construction/construction-9.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 9",
+    },
+    {
+      src: "/images/gallery/construction/construction-10.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 10",
+    },
+    {
+      src: "/images/gallery/construction/construction-11.png",
+      height: "768",
+      width: "1024",
+      alt: "Construction Image 11",
+    },
+  ];
   return (
     <>
       <Head>
@@ -13,85 +82,13 @@ export default function CranesGallery() {
       </Head>
       <WebLayout>
         <Hero pageName={"Construction"} />
-        <GalleryGrid />
+        <GalleryGrid galleryName={"Construction"} images={constructionImages} />
         <GallerySlider />
       </WebLayout>
     </>
   );
 }
 
-function GalleryGrid() {
-  return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:py-24 py-14 overflow-hidden">
-      <SectionHeading heading={"Construction"} />
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 md:grid-rows-3 grid-rows-2 grid-cols-2 mt-14 gap-4">
-        <Image
-          src={"/images/gallery/crane-1.png"}
-          alt="Crane Image"
-          width={836}
-          height={268}
-          className="lg:col-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-4.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-5.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-2.png"}
-          alt="Crane Image"
-          width={402}
-          height={565}
-          className="row-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-3.png"}
-          alt="Crane Image"
-          width={402}
-          height={565}
-          className=" row-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-6.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-7.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-8.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-9.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-      </div>
-    </div>
-  );
-}
 function GallerySlider() {
   const gallerySlides = [
     {

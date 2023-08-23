@@ -1,3 +1,4 @@
+import { GalleryGrid } from "@/components/GalleryGrid";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import SlickSlider from "@/components/SlickSlider";
@@ -5,7 +6,75 @@ import WebLayout from "@/layouts/WebLayout";
 import Head from "next/head";
 import Image from "next/image";
 
-export default function CranesGallery() {
+export default function SlingsGallery() {
+  const slingsImages = [
+    {
+      src: "/images/gallery/slings/sling-1.png",
+      height: "480",
+      width: "640",
+      alt: "Sling Image 1",
+    },
+    {
+      src: "/images/gallery/slings/sling-2.png",
+      height: "480",
+      width: "640",
+      alt: "Sling Image 2",
+    },
+    {
+      src: "/images/gallery/slings/sling-3.png",
+      height: "480",
+      width: "640",
+      alt: "Sling Image 3",
+    },
+    {
+      src: "/images/gallery/slings/sling-4.png",
+      height: "480",
+      width: "640",
+      alt: "Sling Image 4",
+    },
+    {
+      src: "/images/gallery/slings/sling-5.png",
+      height: "480",
+      width: "640",
+      alt: "Sling Image 5",
+    },
+    {
+      src: "/images/gallery/slings/sling-6.png",
+      height: "383",
+      width: "324",
+      alt: "Sling Image 6",
+    },
+    {
+      src: "/images/gallery/slings/sling-7.png",
+      height: "250",
+      width: "592",
+      alt: "Sling Image 7",
+    },
+    {
+      src: "/images/gallery/slings/sling-8.png",
+      height: "250",
+      width: "592",
+      alt: "Sling Image 8",
+    },
+    {
+      src: "/images/gallery/slings/sling-9.png",
+      height: "250",
+      width: "592",
+      alt: "Sling Image 9",
+    },
+    {
+      src: "/images/gallery/slings/sling-10.png",
+      height: "250",
+      width: "592",
+      alt: "Sling Image 10",
+    },
+    {
+      src: "/images/gallery/slings/sling-11.png",
+      height: "250",
+      width: "592",
+      alt: "Sling Image 11",
+    },
+  ];
   return (
     <>
       <Head>
@@ -13,85 +82,13 @@ export default function CranesGallery() {
       </Head>
       <WebLayout>
         <Hero pageName={"Slings"} />
-        <GalleryGrid />
+        <GalleryGrid galleryName={"Slings"} images={slingsImages} />
         <GallerySlider />
       </WebLayout>
     </>
   );
 }
 
-function GalleryGrid() {
-  return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:py-24 py-14 overflow-hidden">
-      <SectionHeading heading={"Slings"} />
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 md:grid-rows-3 grid-rows-2 grid-cols-2 mt-14 gap-4">
-        <Image
-          src={"/images/gallery/crane-1.png"}
-          alt="Crane Image"
-          width={836}
-          height={268}
-          className="lg:col-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-4.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-5.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-2.png"}
-          alt="Crane Image"
-          width={402}
-          height={565}
-          className="row-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-3.png"}
-          alt="Crane Image"
-          width={402}
-          height={565}
-          className=" row-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-6.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-7.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-8.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-9.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-      </div>
-    </div>
-  );
-}
 function GallerySlider() {
   const gallerySlides = [
     {

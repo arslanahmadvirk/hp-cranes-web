@@ -1,30 +1,12 @@
+import { GalleryGrid } from "@/components/GalleryGrid";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import SlickSlider from "@/components/SlickSlider";
 import WebLayout from "@/layouts/WebLayout";
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
-import { Gallery } from "react-grid-gallery";
-import { Lightbox } from "yet-another-react-lightbox";
 
-export default function CranesGallery() {
-  return (
-    <>
-      <Head>
-        <title>Electrical Gallery | HP Cranes</title>
-      </Head>
-      <WebLayout>
-        <Hero pageName={"Electrical"} />
-        <GalleryGrid />
-        <GallerySlider />
-      </WebLayout>
-    </>
-  );
-}
-
-function GalleryGrid() {
-  const [index, setIndex] = useState(-1);
+export default function ElectricalGallery() {
   const electricalImages = [
     {
       src: "/images/gallery/electrical/electrical-1.png",
@@ -105,26 +87,20 @@ function GalleryGrid() {
       alt: "Electrical Image 13",
     },
   ];
-  const handleClick = (index) => setIndex(index);
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:py-24 py-14 overflow-hidden">
-      <SectionHeading heading={"Electrical"} />
-      <div className="mt-14">
-        <Gallery
-          images={electricalImages}
-          enableImageSelection={false}
-          onClick={handleClick}
-        />
-        <Lightbox
-          slides={electricalImages}
-          open={index >= 0}
-          index={index}
-          close={() => setIndex(-1)}
-        />
-      </div>
-    </div>
+    <>
+      <Head>
+        <title>Electrical Gallery | HP Cranes</title>
+      </Head>
+      <WebLayout>
+        <Hero pageName={"Electrical"} />
+        <GalleryGrid images={electricalImages} galleryName={"Electrical"} />
+        <GallerySlider />
+      </WebLayout>
+    </>
   );
 }
+
 function GallerySlider() {
   const gallerySlides = [
     {

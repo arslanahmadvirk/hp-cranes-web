@@ -10,7 +10,7 @@ export function Breadcrumbs() {
       {pathSegments.map((segment, index) => (
         <span key={index}>
           <Link
-            href={`/${pathSegments.slice(0, index + 1).join("/")}`}
+            href={`${pathSegments.slice(0, index + 1).join("/")}`}
             className="hover:underline capitalize"
           >
             {segment === ""

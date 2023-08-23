@@ -1,3 +1,4 @@
+import { GalleryGrid } from "@/components/GalleryGrid";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import SlickSlider from "@/components/SlickSlider";
@@ -5,7 +6,33 @@ import WebLayout from "@/layouts/WebLayout";
 import Head from "next/head";
 import Image from "next/image";
 
-export default function CranesGallery() {
+export default function FactoryMaintenanceGallery() {
+  const maintenanceImages = [
+    {
+      src: "/images/gallery/factory-maintenance/maintenance-1.png",
+      height: 768,
+      width: 1024,
+      alt: "Maintenance Image",
+    },
+    {
+      src: "/images/gallery/factory-maintenance/maintenance-2.png",
+      height: 768,
+      width: 1024,
+      alt: "Maintenance Image",
+    },
+    {
+      src: "/images/gallery/factory-maintenance/maintenance-3.png",
+      height: 768,
+      width: 1024,
+      alt: "Maintenance Image",
+    },
+    {
+      src: "/images/gallery/factory-maintenance/maintenance-4.png",
+      height: 768,
+      width: 1024,
+      alt: "Maintenance Image",
+    },
+  ];
   return (
     <>
       <Head>
@@ -13,85 +40,16 @@ export default function CranesGallery() {
       </Head>
       <WebLayout>
         <Hero pageName={"Factory Maintenance"} />
-        <GalleryGrid />
+        <GalleryGrid
+          images={maintenanceImages}
+          galleryName={"Factory Maintenance"}
+        />
         <GallerySlider />
       </WebLayout>
     </>
   );
 }
 
-function GalleryGrid() {
-  return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:py-24 py-14 overflow-hidden">
-      <SectionHeading heading={"Factory Maintenance"} />
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 md:grid-rows-3 grid-rows-2 grid-cols-2 mt-14 gap-4">
-        <Image
-          src={"/images/gallery/crane-1.png"}
-          alt="Crane Image"
-          width={836}
-          height={268}
-          className="lg:col-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-4.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-5.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-2.png"}
-          alt="Crane Image"
-          width={402}
-          height={565}
-          className="row-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-3.png"}
-          alt="Crane Image"
-          width={402}
-          height={565}
-          className=" row-span-2 object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-6.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-7.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-8.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-        <Image
-          src={"/images/gallery/crane-9.png"}
-          alt="Crane Image"
-          width={402}
-          height={268}
-          className=" object-cover"
-        />
-      </div>
-    </div>
-  );
-}
 function GallerySlider() {
   const gallerySlides = [
     {
