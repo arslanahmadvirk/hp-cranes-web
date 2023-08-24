@@ -10,7 +10,6 @@ import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import WebLayout from "@/layouts/WebLayout";
 import useIntersection from "@/hooks/useIntersection";
 
@@ -188,7 +187,10 @@ function AboutUs() {
               Videos
             </h1>
             <div className="flex flex-col gap-8 text-center">
-              <Link href={"#"} target="_blank">
+              <Link
+                href={"https://www.youtube.com/watch?v=7I90pjRYXoA"}
+                target="_blank"
+              >
                 <Image
                   src={"/images/video-1.png"}
                   width={410}
@@ -198,7 +200,10 @@ function AboutUs() {
                 />
                 <span className="underline">How to calculate a sling load</span>
               </Link>
-              <Link href={"#"} target="_blank">
+              <Link
+                href={"https://www.youtube.com/embed/zCuciG7z1qc"}
+                target="_blank"
+              >
                 <Image
                   src={"/images/video-2.png"}
                   width={410}
@@ -386,7 +391,7 @@ function ProductsAndServices() {
       <div className="text-center mt-14">
         <Link
           href={"/product_&_services"}
-          className="py-2 lg:px-12 px-8 rounded-full font-semibold bg-primary-yellow hover:bg-primary-yellow-dark active:scale-95 transition focus:outline-none"
+          className="py-3 px-8 rounded-full font-semibold bg-primary-yellow hover:bg-primary-yellow-dark active:scale-95 transition focus:outline-none"
         >
           View More
         </Link>
@@ -399,13 +404,34 @@ function Gallery() {
   const isIntersecting = useIntersection("gallery");
   const gallerySlides = [
     {
-      image: "/images/gallery-1.png",
+      image: "/images/gallery/slider-1.png",
     },
     {
-      image: "/images/gallery-2.png",
+      image: "/images/gallery/slider-2.png",
     },
     {
-      image: "/images/gallery-3.png",
+      image: "/images/gallery/slider-3.png",
+    },
+    {
+      image: "/images/gallery/slider-4.png",
+    },
+    {
+      image: "/images/gallery/slider-5.png",
+    },
+    {
+      image: "/images/gallery/slider-6.png",
+    },
+    {
+      image: "/images/gallery/slider-7.png",
+    },
+    {
+      image: "/images/gallery/slider-8.png",
+    },
+    {
+      image: "/images/gallery/slider-9.png",
+    },
+    {
+      image: "/images/gallery/slider-10.png",
     },
   ];
   return (
@@ -433,6 +459,14 @@ function Gallery() {
           ))}
         </SlickSlider>
       </div>
+      <div className="text-center mt-14">
+        <Link
+          href={"/gallery"}
+          className="py-3 px-8 rounded-full font-semibold bg-primary-yellow hover:bg-primary-yellow-dark active:scale-95 transition focus:outline-none"
+        >
+          View More
+        </Link>
+      </div>
     </div>
   );
 }
@@ -444,16 +478,19 @@ function Projects() {
       image: "/images/project-1.png",
       title: "INSTALLATION COMPLETE IN ZAMBIA",
       desc: "Installation Of ; 70 Stroke, 10 Ton Overhead Crane...",
+      link: "/projects/#projectZambia",
     },
     {
       image: "/images/project-2.png",
       title: "Elandsfontein",
       desc: "Give Credit where Credit is due. When life seems to run by us, and we sometimes forget to thank the...",
+      link: "/projects/#projectElandsfontein",
     },
     {
       image: "/images/project-3.png",
       title: "MANUFACTURING OF LEG PROTECTERS",
       desc: "Manufacturing Of Special Racking LEG Protectors...",
+      link: "/projects/#projectLegProtectors",
     },
   ];
   return (
@@ -468,9 +505,14 @@ function Projects() {
       <SectionHeading heading={"Projects"} />
       <div className=" mt-14 ">
         <SlickSlider>
-          {projects.map(({ image, title, desc }) => (
+          {projects.map(({ image, title, desc, link }) => (
             <div key={image} className="px-4 py-2">
-              <ProjectCard image={image} title={title} desc={desc} />
+              <ProjectCard
+                image={image}
+                title={title}
+                desc={desc}
+                link={link}
+              />
             </div>
           ))}
         </SlickSlider>
@@ -479,7 +521,7 @@ function Projects() {
   );
 }
 
-function ProjectCard({ image, title, desc }) {
+function ProjectCard({ image, title, desc, link }) {
   return (
     <div className="flex flex-col rounded-xl shadow-md h-[450px] transition duration-300 hover:-translate-y-1  hover:shadow-lg cursor-pointer">
       <Image
@@ -494,7 +536,10 @@ function ProjectCard({ image, title, desc }) {
         <h1 className="text-lg font-bold uppercase h-12 mb-2">{title}</h1>
         <p className="mb-4 h-16">{desc}</p>
       </div>
-      <Link href={"#"} className="relative bottom-3 left-4 text-left underline">
+      <Link
+        href={link || "#"}
+        className="relative bottom-3 left-4 text-left underline"
+      >
         <span className="font-medium">Read More</span>
         <HiArrowRight className="inline ml-2" />
       </Link>

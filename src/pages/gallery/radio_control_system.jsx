@@ -10,44 +10,44 @@ export default function CranesGallery() {
   const rcsImages = [
     {
       src: "/images/gallery/radio-control-system/remote-1.png",
-      height: "250",
-      width: "250",
+      height: "309",
+      width: "309",
       alt: "Remote Image 1",
     },
     {
       src: "/images/gallery/radio-control-system/remote-2.png",
-      height: "676",
+      height: "333",
       width: "309",
       alt: "Remote Image 2",
     },
     {
       src: "/images/gallery/radio-control-system/remote-3.png",
-      height: "199",
-      width: "185",
+      height: "495",
+      width: "309",
       alt: "Remote Image 3",
     },
     {
       src: "/images/gallery/radio-control-system/remote-4.png",
-      height: "280",
-      width: "500",
+      height: "461",
+      width: "309",
       alt: "Remote Image 4",
     },
     {
       src: "/images/gallery/radio-control-system/remote-5.png",
-      height: "400",
-      width: "466",
+      height: "267",
+      width: "310",
       alt: "Remote Image 5",
     },
     {
       src: "/images/gallery/radio-control-system/remote-6.png",
-      height: "461",
+      height: "174",
       width: "309",
       alt: "Remote Image 6",
     },
     {
       src: "/images/gallery/radio-control-system/remote-7.png",
-      height: "240",
-      width: "150",
+      height: "676",
+      width: "309",
       alt: "Remote Image 7",
     },
   ];
@@ -59,6 +59,7 @@ export default function CranesGallery() {
       <WebLayout>
         <Hero pageName={"Radio Control System"} />
         <GalleryGrid galleryName={"Radio Control System"} images={rcsImages} />
+        <GallerySlider />
       </WebLayout>
     </>
   );
@@ -93,7 +94,7 @@ function GallerySlider() {
                 width={250}
                 height={250}
                 alt="Product Image"
-                className="rounded-xl mx-auto"
+                className="rounded-xl object-cover aspect-square mx-auto"
               />
             </div>
           ))}

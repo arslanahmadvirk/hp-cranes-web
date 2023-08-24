@@ -55,9 +55,6 @@ export default function Projects() {
 
   const Project2016 = [
     {
-      image: "/images/projects/2016-1.png",
-    },
-    {
       image: "/images/projects/2016-2.png",
     },
     {
@@ -87,9 +84,8 @@ export default function Projects() {
         <ProjectOverview
           image1={"/images/projects/zambia-main-1.png"}
           image2={"/images/projects/zambia-main-2.png"}
-          order={"fl"}
         >
-          <h1 className="font-bold text-2xl mb-4 uppercase">
+          <h1 id="projectZambia" className="font-bold text-2xl mb-4 uppercase">
             INSTALLATION COMPLETE IN ZAMBIA
           </h1>
           <p className="text-justify">
@@ -104,7 +100,12 @@ export default function Projects() {
           image2={"/images/projects/elandsfontein-main-2.png"}
           order="flex-row-reverse"
         >
-          <h1 className="font-bold text-2xl mb-4 uppercase">Elandsfontein</h1>
+          <h1
+            id="projectElandsfontein"
+            className="font-bold text-2xl mb-4 uppercase"
+          >
+            Elandsfontein
+          </h1>
           <p className="text-justify">
             Give Credit where Credit is due. When life seems to run by us, and
             we sometimes forget to thank the people who gives more than their
@@ -122,7 +123,9 @@ export default function Projects() {
           image1={"/images/projects/2016-main-1.png"}
           image2={"/images/projects/2016-main-2.png"}
         >
-          <h1 className="font-bold text-2xl mb-4 uppercase">2016 PROJECT</h1>
+          <h1 id="project2016" className="font-bold text-2xl mb-4 uppercase">
+            2016 PROJECT
+          </h1>
           <p className="text-justify">
             We can start to say that 2015 was an extraordinary year, we thank
             our employees for their hard work, and also our Provider who never
@@ -144,7 +147,10 @@ export default function Projects() {
           image2={"/images/projects/leg-manufacture-2.png"}
           order={"flex-row-reverse"}
         >
-          <h1 className="font-bold text-2xl mb-4 uppercase">
+          <h1
+            id="projectLegProtectors"
+            className="font-bold text-2xl mb-4 uppercase"
+          >
             MANUFACTURING OF LEG PROTECTERS & LIFTING DEVICES
           </h1>
           <p className="text-justify">
@@ -163,9 +169,8 @@ export default function Projects() {
                 <Image
                   src={"/images/breakdown-img.png"}
                   alt="Breakdowns Image"
-                  height={515}
-                  width={362}
-                  className=" w-full"
+                  width={768}
+                  height={380}
                 />
               </div>
               <div className="lg:w-1/2 w-full lg:mx-0 mx-5 my-5">
@@ -187,7 +192,7 @@ export default function Projects() {
 
 function ProjectImageSlider({ slides }) {
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
+    <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-20 pb-16 overflow-hidden">
       <div className="lg:mx-0 mx-5">
         <SlickSlider visibleSlides={5}>
           {slides.map(({ image }, index) => (
@@ -204,7 +209,7 @@ function ProjectImageSlider({ slides }) {
 function ProjectOverview({ image1, image2, order, children }) {
   return (
     <div className=" 2xl:max-w-screen-2xl mx-auto">
-      <div className="container mx-auto lg:my-24 my-14">
+      <div className="container mx-auto lg:my-32 my-16">
         <div
           className={`flex flex-wrap ${order} lg:flex-nowrap justify-between gap-12`}
         >
