@@ -107,6 +107,9 @@ function GallerySlider() {
       image: "/images/gallery/electrical/electrical-1.png",
     },
     {
+      image: "/images/gallery/electrical/electrical-2.png",
+    },
+    {
       image: "/images/gallery/electrical/electrical-5.png",
     },
     {
@@ -117,6 +120,9 @@ function GallerySlider() {
     },
     {
       image: "/images/gallery/electrical/electrical-11.png",
+    },
+    {
+      image: "/images/gallery/electrical/electrical-12.png",
     },
     {
       image: "/images/gallery/electrical/electrical-13.png",

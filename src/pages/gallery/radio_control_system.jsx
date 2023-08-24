@@ -82,6 +82,12 @@ function GallerySlider() {
     {
       image: "/images/gallery/radio-control-system/remote-5.png",
     },
+    {
+      image: "/images/gallery/radio-control-system/remote-6.png",
+    },
+    {
+      image: "/images/gallery/radio-control-system/remote-7.png",
+    },
   ];
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">

@@ -92,6 +92,15 @@ export default function SlingsGallery() {
 function GallerySlider() {
   const gallerySlides = [
     {
+      image: "/images/gallery/slings/sling-1.png",
+    },
+    {
+      image: "/images/gallery/slings/sling-5.png",
+    },
+    {
+      image: "/images/gallery/slings/sling-6.png",
+    },
+    {
       image: "/images/gallery/slings/sling-7.png",
     },
     {

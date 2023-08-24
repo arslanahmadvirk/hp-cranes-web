@@ -92,6 +92,12 @@ export default function CranesGallery() {
 function GallerySlider() {
   const gallerySlides = [
     {
+      image: "/images/gallery/construction/construction-4.png",
+    },
+    {
+      image: "/images/gallery/construction/construction-5.png",
+    },
+    {
       image: "/images/gallery/construction/construction-6.png",
     },
     {

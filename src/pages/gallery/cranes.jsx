@@ -124,6 +124,15 @@ function GallerySlider() {
     {
       image: "/images/gallery/cranes/crane-5.png",
     },
+    {
+      image: "/images/gallery/cranes/crane-6.png",
+    },
+    {
+      image: "/images/gallery/cranes/crane-7.png",
+    },
+    {
+      image: "/images/gallery/cranes/crane-8.png",
+    },
   ];
   return (
     <div className="container 2xl:max-w-screen-2xl mx-auto lg:pb-24 pb-14 overflow-hidden">
