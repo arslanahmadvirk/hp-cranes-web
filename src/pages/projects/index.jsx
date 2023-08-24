@@ -165,7 +165,7 @@ export default function Projects() {
             <div
               className={`flex flex-wrap lg:flex-nowrap justify-between gap-12`}
             >
-              <div className="lg:w-1/2 w-full relative lg:mx-0 mx-5">
+              <div className="lg:w-1/2 w-full relative lg:mx-0 ">
                 <Image
                   src={"/images/breakdown-img.png"}
                   alt="Breakdowns Image"
